@@ -35,5 +35,13 @@
         <li><a href="https://www.duxhumanhealth.com/multivitaminico-pote30caps/p?network=x&utm_source=google&utm_medium=cpc&utm_campaign=conversao-aquisicao-google-pmax-dux-sazonais_&utm_content=&utm_term=-&cupom=clientevip15&gad_source=1&gclid=Cj0KCQjw28W2BhC7ARIsAPerrcJltVzU5biY7FU-vTeXFTDucXenIyfG98OwgQnRNvXE7IEyRvWJaxAaApF7EALw_wcB" target="navegadorzinho">Melhor multivitamínico</a></li>
     </ul>
     <iframe src="" frameborder="1" name="navegadorzinho"></iframe>
+    <h2>Conteúdo do iframe por código</h2>
+    <p> Quando iniciamos a página o iframe inicia-se vazia (como podemos ver acima), para que não fique um espaço em branco por padrão, podemos substituir o parâmetro 'src' pelo 'srcdoc'. Esse parâmetro aceita HTML como valor e é o conteúdo inicial e estático a ser implementado.
+    </p>
+    <iframe srcdoc="<h1> Escolha uma das opções para ser exibida aqui</h1>" frameborder="1"name="navegadorzinho"></iframe>
+    <h2>Seguraça com os iframes</h2>
+    <p>Como podemos carregar outros sites de origem desconhecida, dentro do nosso próprio site, isso deixa o site vulnerável. Para fortificar as barreiras e bloquear ações maliciosas podemos utilizar a configuração 'sandbox' com o valor = sandbox. Quando se coloca isso no iframe, ocorre um bloqueio do acesso dos sites externos.
+    </p>
+    <iframe src="" frameborder="1" sandbox="sandbox"></iframe>
 </body>
 </html>
