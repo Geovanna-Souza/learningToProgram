@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo-padrao.css">
+    <title>Iniciando com as CSS</title>
+</head>
+<body>
+    <h1>Usando as CSS3</h1>
+    <p>Aqui iniciaremos o manuseio de estilos dentro do site</p>
+    <h2 style="font-family: Arial, Helvetica, sans-serif; color: rgba(255, 0, 255, 0.473);">O parâmetro STYLE (In Line)</h2>
+    <p>Esse parâmetro fornece estilos de fonte e cor, entretanto é necessário atentar-se com a forma que esse parâmetro é preenchido, tendo-se assim muita atenção com letras maíusculas e separação com ponto e vírgula (;). Nesse paragráfo temos uma aplicação das CSS 'in line', essa aplicação é feita de maneira exclusiva para o título em questão (não irá aplicar a todos os h2 nesse caso). Por conta disso esse método não é usado no dia-a-dia, e sim para realizar modificações muito pontuais</p>
+    <h2>Estilos locais / internos</h2>
+    <p>Para realizarmos tal tipo de estilização temos que criar uma tag &lt;style&gt; dentro da tag &lt;head&gt;, e a partir de lá podemos aplicar estilos que irão ser executados em todo o conteúdo da página ATUAL. Segue um exemplo:
+        <code>
+            <pre>
+            &lt;head&gt;
+                &lt;style&gt;
+                    body {
+                        background-color: black;
+                        font-size: 15px;
+                        font-family: Georgia, 'Times New Roman', Times, serif;
+                        color: white;
+                    }
+                    h1 {
+                        color: white;
+                    }
+                    h2 {
+                        color: red
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            </pre>
+        </code>
+    </p>
+    
+    <h2>CSS external style</h2>
+    <p>Esse tipo de aplicação de estilo é o mais versátil que tem, nele podemos aplicar e editar as CSS em diversas páginas diferentes sem precisar entrar em cada uma delas para edita-las individualmente.
+        <br>
+        <a href="inicio-das-css-pt2.html" target="_self" rel="next">Podemos ver isso indo para a página 2.</a>
+    </p>
+</body>
+</html>

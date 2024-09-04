@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo-padrao.css">
+    <title>ID e classes</title>
+</head>
+<body>
+    <main>
+        <h1>Aprendendo e aplicando 'id' e 'class'</h1>
+        <h1>Sobre 'id'</h1>
+        <p>Ao criar um documento em HTML, podemos identificar determinado elemento com a função 'id', na folha de estilo, para aplicarmos os estilos para aquele elemento identificado de forma diferente dos demais utilizamos a hashtag (#) entre o tipo do elemento e sua identificação.
+        <br>
+        Ex:<code>
+                <pre>
+                    @charset "UTF-8";
+                    h1{
+                        color: #D907A9;
+                        text-align: center;
+                        text-shadow: 2px, 2px, 3px, #F8074A;
+                    }
+                    
+                    h1#principal{
+                        color: #8007D9;
+                        text-align: left;
+                        text-shadow: 2px, 2px, 3px, #5107F8;
+                    }
+                </pre>
+        </code>
+        </p>
+        <h2>Para que serve o 'id'?</h2>
+        <p>Um 'id' vai <span>identificar um elemento único dentro da página</span>. Essa identificação permite com que seja possível criar estilos especiais para um elemento isolado. Sendo assim, dentro de um documento HTML só se pode ter um único 'id'.</p>
+        <h1>Sobre 'class'</h1>
+        <p>Já na classe podemos classificar determinado(os) elemento(os) com a função 'class', para aplicarmos os estilos para aquele ou mais elementos, nós os identificamos de forma diferente dos demais utilizando um ponto (.) + nome dado a classe dentro do documento em CSS.
+        <br>
+        Ex:<code>
+                <pre>
+                    h2{
+                        color: #D907A9;
+                        text-align: right;
+                        font-size: 1.8em;
+                    }
+                    
+                    .subject{
+                        color: #CE05F0;
+                        font-size: 1.8em;
+                    }
+                    
+                    .meaning{
+                        color: #F8074A;
+                        text-decoration: underline;
+                    }
+                    
+                    .obs{
+                        color: rgba(0, 0, 0, 0.342);
+                    }
+                </pre>
+        </code>
+        </p>
+        <h2>Para que serve as 'class'?</h2>
+        <p>As classes vão <span>classificar um ou mais elementos que pertencem ao mesmo grupo</span>, assim compartilhando características em comum a todos os que façam parte do grupo.</p>
+        <p><small class=>Podemos usar a tag &lt;span&gt; Para aplicar os estilos de classes no meio dos textos. Podemos também aplicar um 'id' e uma 'class' no mesmo trecho. Além disso podemos aplicar mais de uma 'class' ao mesmo conteúdo do documento, basta adicionar um espaço entre uma classe e outra.</small></p>
+        <h1>Pseudo-classes e Pseudo-elementos</h1>
+        <h2>Pseudo-classes</h2>
+        <p>As pseudo-classes estão <span>relacionadas ao estado de um elemento ou a uma classe.</span> São representadas em CSS3 pelo símbolo de dois pontos (:). Segue uma lista de algumas das pseudo-classes:
+            <ul>
+                <li>:hover (estilo aplicado para quando o mouse é passado por cima);</li>
+                <li>:visited (estilo aplicado sobre links já visitados);</li>
+                <li>:active (estilo aplicado para dar resposta visual a um click);</li>
+                <li>:checked;</li>
+                <li>:empty;</li>
+                <li>:focus.</li>
+            </ul>
+        <br>
+        Segue abaixo um exemplo da pseudo-classe 'hover':
+        <br>
+        <div>PEDRA</div>
+        <div>PAPEL</div>
+        <div>TESOURA</div>
+        <br>
+        Acima podemos ver que ao passar o mouse por cima dos quadrados feitos com a tag &lt;div&gt; os mesmos mudam de cor, sendo assim essa a funcionalidade de tal pseudo-classe.
+        </p>
+        <p>Podemos também aplicar o conceito de herança nas CSS. O símbolo &gt; em CSS indica que a tag do lado esquerdo do símbolo é 'pai' da tag do lado direito. Segue mais um exemplo com a pseudo-classe ':hover' relacionada a herança.
+        <br>
+            Ex: <div style="height: fit-content; width: fit-content;">Ao passar o mouse por cima desse texto...
+            <p>... o resto dele aparece.</p>
+            </div>
+            
+        </p>
+        <h3>Personalizando links</h3>
+        <p>Através das pseudo-classes, podemos personalizar links dentro da página, segue o exemplo:
+        <br>
+        Ex: <ul>
+            <li><a href="https://www.instagram.com/thisisgigika/" target="_blank" rel="external">@thisisgigika</a></li>
+            <li><a href="https://github.com/Geovanna-Souza/htma5---css3-learning" target="_blank" rel="external">Meu repositório no GitHub.</a></li>
+        </ul>
+        </p>
+        <h2>Pseudo-elementos</h2>
+        <p>São folhas de estilo que podem agir no conteúdo das classes, elementos, e 'id'. Em CSS psceudo-elementos são representados por 2 dois pontos (::). Segue abaixo uma lista de alguns pseudo-elementos:
+            <ul>
+                <li>::before (estilo aplicado antes todo o conteúdo da tag/classe/id em questão);</li>
+                <li>::after (estilo aplicado após todo o conteúdo da tag/classe/id em questão);</li>
+                <li>::first-letter;</li>
+                <li>::first-line.</li>
+            </ul>
+        </p>
+    </main>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo-padrao.css">
+    <title>Listas</title>
+<body>
+    <main>
+        <h1>Listas em HTML</h1>
+        <h2>Listas ordenadas</h2>
+        <p>São listas onde a ordem dos itens é algo importante. Por exemplo: Passo-a-passos, receitas, lista de preços, etc.</p>
+        <p>Para criar listas ordenads utiliza-se a tag &lt;ol&gt;, e a tag &lt;li&gt; para adicionar os itens na lista. Além disso também há o parâmetro TYPE= que configura o tipo de marcador da lista, podendo ser dos seguintes tipos: A, B, C, D... 1,2,3,4... a, b, c, d... I, II, III, IV... e i, ii, iii, iv.</p>
+        <p>Por fim, também é possível selevionar o valor pelo qual a lista se inicia, utilizando o parâmetro START=.</p>
+        <p>Segue abaixo um exempo de lista ordenada:</p>
+        <p><ol type="1">
+            <li>1° Passo - Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel earum soluta placeat rerum laborum modi! Laboriosam eum asperiores architecto. Iure, natus nihil sequi corrupti expedita dignissimos culpa fugiat repellat eligendi!</li>
+            <li>2°Passo - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum vel accusantium pariatur harum velit tenetur sit. Consequuntur error necessitatibus, nulla quia deleniti temporibus tenetur voluptate ut! Esse voluptate minima recusandae!</li>
+            <li>3° Passo - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates assumenda magnam nulla numquam? Error eveniet aliquid mollitia exercitationem minus nostrum expedita odit fugiat earum, praesentium consequuntur vero, quod dolorum! Eligendi!</li>
+           </ol>
+        </p>
+        <h2>Listas não ordenadas</h2>
+        <p>Também chamadas de marcadores, as listas não ordenadas são aquelas listas cujo a ordem dos itens não influenciam o significado da lista.</p>
+        <p>Para criar uma lista não oredenada, basta abrir a tag &lt;ul&gt;, e a tag &lt;li&gt; para criar cada um dos itens a serem inseridos.</p>
+        <p>O marcador padrão desse tipo de lista costuma ser uma bolinha preta totalmente preenchida, entretanto há outros tipos de marcadores para serem adicionados no parâmetro TYPE=, sendo elas: disc, circle e square.</p>
+        <p>Segue abaixo um exemplo:</p>
+        <p>
+            <ul type= "square">
+                <li>Casa</li>
+                <li>Carro</li>
+                <li>Emprego</li>
+                <li>Viagem</li>
+                <li>Dinheiro</li>
+            </ul>
+        </p>
+        <h2>Listas mistas</h2>
+        <p>Também é possível misturar listas uma dentro da outra, segue o exemplo:</p>
+        <p>
+            <ol type="I">
+                <li>Sumário</li>
+                    <ol type="i">
+                        <li>Introdução</li>
+                        <li>Abstract</li>
+                        <li>Resumo</li>
+                    </ol>
+                <li>Desenvolvimento</li>
+                    <ol type="i" start="4">
+                        <li>Desenvolvimeto - parte 1</li>
+                            <ul type= "circle">
+                                <li>Metodologia</li>
+                                <li>Materiais e métodos</li>
+                            </ul>
+                        <li>Desenvolvimento - parte 2</li>
+                            <ul type="circle">
+                                <li>Metodologia - parte 2</li>
+                                <li>Materiais e métodos - parte 2</li>
+                            </ul>
+                        <li>Desenvolvimento - parte 3</li>
+                            <ul type="circle">
+                                <li>Metodologia - parte 3</li>
+                                <li>Materiais e métodos - parte 3</li>
+                            </ul>
+                    </ol>
+                <li>Conclusão</li>
+                <li>Bibliografia</li>
+            </ol>
+        </p>
+        <h2>Listas de definição</h2>
+        <p>É uma lista que possui um termo a ser definido, seguido sua definição. Essa lista é criada pela tag &lt;dl&gt; (definition list), e os termos são criados pela tag &lt;dt&gt;(definition term), dentro dos termos vão suas respectivas definições criadas pela tag &lt;dd&gt; (definition description).</p>
+        <p>Segue o exemplo:</p>
+        <p>
+            <dl>
+                <dt> RPG
+                    <dd>
+                        A sigla RPG, oriunda da expressão em inglês “Role Playing Game”, define um estilo de jogo em que as pessoas interpretam seus personagens, criando narrativas, histórias e um enredo guiado por uma delas, que geralmente leva o nome de mestre do jogo.
+                    </dd>
+                </dt>
+                <dt> MMORPG
+                    <dd>
+                        MMORPG é um dos gêneros de videogame mais populares e lucrativos dos últimos anos. ... A sigla MMORPG significa “Massively Multiplayer Online Role-Playing Game” (ou “jogo de representação de papéis online, multijogador em massa”, em tradução livre).
+                    </dd>
+                </dt>
+                <dt> Battle Royal
+                    <dd>
+                        Battle royal (plural battles royal), refere-se tradicionalmente a um combate envolvendo três ou mais lutadores até que somente um se mantenha em pé. Recentemente, este termo tem sido usado geralmente para se referir a qualquer combate que envolva um grande número de pessoas.
+                    </dd>
+                </dt>
+            </dl>
+        </p>
+    </main>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo-padrao.css">
+    <title>Sombras e bordas</title>
+</head>
+<body>
+    <main>
+        <h1>Sombreamento de caixas</h1>
+        <p>Sombras são muito importantes para dar um efeito de volume e até um leve sensação de realidade. Para aplicar esse efeito em caixas, é necessário utilizar a declaração "box-shadow" em CSS.
+        <br>
+        Nesse paragráfo podemos visualizar a presença de sombra. É importânte lembrar que não se recomenda o uso de sombras coloridas apenas sombras pretas são recomendadas. Além disso o uso de transparência na cor da sombra é altamente aconselhável.
+        </p>
+        <h2>Propriedades da sombra</h2>
+        <p>A declaração em CSS "box-shadow" apresenta 4 valores a serem declarados, sendo eles:
+            <ul type="square">
+                <li>Deslocamento horizontal (h-offset): Que representa o quanto a sombra 'andar' para o lado direito (podendo ser movida para esquerda quando tal valor for negativo);</li>
+                <li>Delocamento vertical (v-offset): Representa o quanto a sombra se desloca para baixo (podendo ser movida para cima quando tal valor for negativo);</li>
+                <li>Embaçamento (blur): Valor relacionado ao quanto a sombra irá se espalhar como fundo;</li>
+                <li>Cor (color): Cor da sombra. Pode usar transparência.</li>
+            </ul>
+        </p>
+        <h1>Bordas decoradas</h1>
+        <p>Como temos a possibilidade de decorar qualquer elemento com as CSS, com as bordas não seria diferente. Podemos arredondar os seus vértices usando a declaração "border-radius".</p>
+        <h2>Propriedades das bordas</h2>
+        <p>As propriedades da bordas podem ser declaradas de várias maneiras diferentes:
+            <ul>
+                <li>"border-radius: 10px": Informa que os 4 vértices teram o mesmo valor de raio;</li>
+                <li>"border-radius: 10px 20px 30px 40px": Informa o valor de cada vértice. A ordem se inicia no vértice superior esquerdo;</li>
+                <li>"border-radius: 10px 30px": Informa o valor intercalado do raio dos vértices, sendo o primeiro valor aplicado no vértice superior esquerdo e no vértive inferior direito, e o segundo valor é aplicado nos vértices superior direito e inferior esquerdo.</li>
+            </ul>
+        </p>
+        <h2>EXTRA: Bordas personalizadas</h2>
+        <p>Para criar essa bordas, é necessário fazer operarmos no gimp. Nele iremos criar um novo arquivo com as dimenções de 80x80, 70 de resolução e cor de fundo transparente. Em seguida a borda é desenhada e adicionada via CSS no documento HTML através da declaração "border-image-source: url('nome-imagem')" onde a imagem criada é anexada.
+        <br>
+        Após a imagem ser anexada (e após ter criado uma borda normal), é necessário adicionar outras duas declarações que são as "border-image-slice: numero" e "border-image-repeat: repeat"
+        </p>
+    </main>
+</body>
+</html>
+</body>
+</html>

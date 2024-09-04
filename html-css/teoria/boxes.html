@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo-padrao.css">
+    <title>Boxes</title>
+</head>
+<body>
+    <header>
+        <h1>Região de cabeçalho</h1>
+        <nav>
+            <a style="margin: 10px;" href="">Aba1</a>
+            <a style="margin: 10px;" href="">Aba2</a>
+            <a style="margin: 10px;" href="">Aba3</a>
+            <a style="margin: 10px;" href="">Aba4</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Modelo de caixas</h1>
+        <h2>Anatomia das caixas</h2>
+        <p>Olhando uma caixa de dentro para fora, temos primeiro o <mark>conteudo</mark> (content), que por sua vez possui uma <strong>largura</strong> (width) e uma <strong>altura</strong> (heigth) a soma desses elementos resulta no que chamamos de <mark>box-size</mark>(tamanho da caixa).
+        <br>
+        Em seguida temos a <mark>borda</mark> (border), que possui sua própria espessura, cor e formato.
+        <br>
+        Entre a borda e o conteúdo - da borda para dentro - temos a região de <mark>preenchimento</mark> (padding), e para fora da borda temos a <mark>margem</mark> (margin).
+        <br>
+        Entre a margem e a borda temos a região de contorno (outline), que é pouco utilizado, porém existe. É um traçado visual que podemos criar para fora da borda e o cálculo da sua espessura faz parte da margem estabelecida.
+        <br>
+        Segue abaixo uma imagem de exemplo das estruturas mencionadas:
+        </p>
+            <picture>
+                <source media="(max-width: 550px)" srcset="imagens-boxes/box-anatomy-P.png" type="image/png">
+                <source media="(max-width: 950px)" srcset="imagens-boxes/box-anatomy-M.png" type="image/png">
+                <img src="imagens-boxes/box-anatomy-G.png" alt="anatomia-caixa-G">
+            </picture>
+        <h2>Tipos de caixas</h2>
+        <h3>Caixas em Block-level</h3>
+        <p>Caixa do tipo block-level são aquelas caixas que se iniciam na próxima linha e ocupam a largura total da página. Segue abaixo uma lista de algumas tags do tipo box-level:
+            <ul type="square">
+                <li>&lt;div&gt;</li>
+                <li>&lt;main&gt;</li>
+                <li>&lt;h1&gt; - &lt;h6&gt;</li>
+                <li>&lt;dd&gt;</li>
+                <li>&lt;pre&gt;</li>
+                <li>&lt;p&gt;</li>
+            </ul>
+        </p>
+        <h3>Caixas em Inline-level</h3>
+        <p>Essas caixas tem como característica começar no ponto exato onde foram definidas, sendo assim sua largura ocupa apenas o tamanho relativo ao seu conteúdo. Exemplo de algumas tags Inline-level abaixo:
+            <ul type="square">
+                <li>&lt;a&gt;</li>
+                <li>&lt;abbr&gt;</li>
+                <li>&lt;em&gt;</li>
+                <li>&lt;code&gt;</li>
+                <li>&lt;small&gt;</li>
+                <li>&lt;q&gt;</li>
+            </ul>
+        </p>
+        <h1>Aqui teremos alguns exemplos na prática</h1>
+        <p>No título acima temos a borda(roxa escura) e um preenchimento bem largo. </p>
+        <p>Já nesse parágrafo temos mundanças no tamanho da caixa (alterando o tamanho e largura da caixa em questão).</p>
+        <p>Aqui podemos ver um exemplo de Inline-level com esse link do meu <a href="https://www.instagram.com/thisisgigika/">instagram.</a></p>
+        <p><span class="observacao">OBS: </span><small>Perceba que no exemplo de Inline-level as alterações de estilos feitas são restritas apenas ao conteúdo da tag, o que não ocorre com os Block-level.</small></p>
+        <p>Nesse parágrafo a margem do texto está no modo 'auto', sendo assim esse parágrafo se encontra centralizado nesse trecho da página.
+        <br>
+        Aqui também temos o contorno, que fica logo após a borda.
+        </p>
+        <p><span>OBS:</span> <small>Por ser dependente do tamanho da margem o contorno/outline nunca ultrapassa a mesma e nem altera o valor da margem.</small></p>
+        <h1>Tags de grupamento - Semânticas</h1>
+        <h2>&lt;header&gt;</h2> 
+        <p>Essa é a tag utilizada para construir cabeçalhos do site. Geralmente dentro dela existe a tag &lt;nav&gt;.</p>
+        <h2>&lt;nav&gt;</h2>
+        <p>Na &lt;nav&gt; Temos vários links que são responsáveis pela navegação do site.</p>
+        <h2>&lt;main&gt;</h2>
+        <p>É a tag responsável por agrupar e delimitar o contúdo principal da página. Nela normalmente se consenta as seções, artigos e conteúdos periféricos.</p>
+        <h2>&lt;section&gt;</h2>
+        <p>Cria secões em uma página, é um agrupamento temático de conteúdos.</p>
+        <h2>&lt;article&gt;</h2>
+        <p>Um artigo é uma elemento que contém um conteúdo que pode ser lido de forma independente e dizem respeito ao mesmo assunto, podemos utilizar essa tag para delimitar um pode blog, fórum, notícia, etc.</p>
+        <h2>&lt;aside&gt;</h2>
+        <p>Delimita conteúdos periféricos e complementares, que normalmete está posicionado ao lado ou até no meio do texto</p>
+        <h2>&lt;footer&gt;</h2>
+        <p>É a tag responsável por criar o rodapé da página.</p>
+        <h2>Resumindo..</h2>
+        <p>A estrutura básica do site é a junção de todos os elementos acima, segue abaixo um exemplo de página organizada de forma semântica e hierárquica:</p>
+        <p><picture>
+            <source media="(max-width: 750px)" srcset="imagens-boxes/grouping-boxes-small.png" type="image/png">
+            <source media="(max-width: 1050px)" srcset="imagens-boxes/grouping-boxes-medium.png" type="image/png">
+            <img src="imagens-boxes/grouping-boxes-big.png" alt="grouping-boxes">
+        </picture></p>
+    </main>
+    <footer>
+        <h1>Região de rodapé</h1>
+        <p style="text-align: center;"><small>Página desenvolvida por Gigica Int.</small></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo-padrao.css">
+    <title>Fontes</title>
+</head>
+<body>
+    <main>
+        <h1>Tipografia e fontes</h1>
+        <h2>Fontes e suas famílias</h2>
+        <p>As fontes são classificadas entre fontes com serifa, fontes sem serifa, fontes monoespaçadas, fontes scritadas e fontes display. Abaixo podemos ver um exemplo de cada uma delas respectivamente:
+            <ul>
+                <li style="font-family: serif;">Good shit!</li>
+                <li style="font-family: sans-serif;">Good shit!</li>
+                <li style="font-family: monospace;">Good shit!</li>
+                <li style="font-family: Brush Script MT;">Good shit!</li>
+                <li style="font-family: fantasy;">Good shit!</li>
+            </ul>
+        </p>
+        <h2>Tamanhos para fontes</h2>
+        <p>Os tamanhos usados para fontes são dividido entre: Medidas absolutas e medidas relativas.
+        <br>
+        Dentre das medidas absolutas temos:
+            <ul>
+                <li><sub>cm</sub> (centímetro);</li>
+                <li><sub>mm</sub> (milímetro);</li>
+                <li><sub>in</sub> (polegada);</li>
+                <li><mark><sub>px</sub> (pixel);</mark></li>
+                <li><sub>pt</sub> (ponto);</li>
+                <li><sub>pc</sub> (paica).</li>
+            </ul>
+        Já nas medidas relativas temos:
+            <ul>
+                <li><mark><sub>em</sub> (medida relativa ao tamanho da letra 'M' de uma fonte);</mark></li>
+                <li><sub>ex</sub> (relativo a altura-x de uma fonte);</li>
+                <li><sub>rem</sub> (semelhante ao <sub>em</sub> porém tem influnência da 'root' configurada no 'body');</li>
+                <li><sub>vw</sub> ('view width' varia de acordo com uma porcentagem da largura da tela);</li>
+                <li><sub>vh</sub> ('view height' varia de acordo com uma porcentagem da altura da tela);</li>
+                <li>% (porcentagem)</li>
+            </ul>
+        <br>
+        Mesmo tendo várias opções de tamanho, a <a href="https://www.w3schools.com/cssref/css_websafe_fonts.asp" target="_blanck" rel="external">W3C</a> recomenda o uso de <sub>px</sub> e <sub>em</sub> apenas.
+        </p>
+        <h3>Sobre o tamanho do <sub>em</sub></h3>
+        <p>O <sub>em</sub> é uma medida cujo uma unidade equivale a 16<sub>px</sub>, sendo assim seu valor é o resultado dessa expressão= x*16<sub>px</sub>, segue o exemplo:
+        <br>
+        3<sub>em</sub> = 48<sub>px</sub></p>
+        <h2>Outros estilos e a shorthand</h2>
+        <p>Existem outras formatações muito usadas em CSS, que são as propriedades 'font-style' (aplica o itálico -sem semântica), 'font-weight' (aplica o negrito - sem semântica) e 'text-decoration' (aplica o sublinhado - sem semântica).
+        <br>
+        Já os shorthands são atalhos que simplificam as alicações dessas propriedades das CSS, para criar uma shorthand basta criar a propriedade 'font:' e aplicar as folhas de estilo, segue o exemplo:
+        <br>
+            <code>
+                <pre>font: italic bold 1em Arial, Helcetica, sans-serif;
+                </pre>
+            </code>
+        É necessário lembrar que para aplicar essa propriedade corretamente é necessário seguir a ordem correta dos atributos (font-style, font-varient, font-weight, font-size e font-family)
+        </p>
+        <h3>Usando o Google fonts</h3>
+        <p>Também é possível fazer uso de fontes de origem externa, e um dos lugares a se encontrar essa fontes é no <a href="https://fonts.google.com/" target="_blank" rel="external">Google<sup>&reg;</sup> fonts.</a> Um exemplo disso é a lista abaixo:
+            <ul>
+                <li style="font-family: 'Redacted Script', cursive;">Good shit!</li>
+                <li style="font-family: 'Raleway Dots', cursive;">Good Shit!</li>
+                <li style="font-family: 'Bungee Shade', cursive;">Good shit!</li>
+            </ul>
+        </p>
+        <h3>Fontes externas baixadas</h3>
+        <p>Em alguns momentos podemos nos deparar com o caso onde o cliente tem a própria fonte, comprou ou simplesmente não se interresa pelas fontes presentes no Google<sup>&reg;</sup> fonts, nesse caso existe outra ferramenta na qual podemos baixar fontes, sendo ela a <a href="https://www.dafont.com/pt/" target="_blank" rel="external">dafont</a>. Após baixar o pacote de fontes desejada, é necessário criar um <mark>'@font-face'</mark> na porção 'head' e ou arquivo CSS externo para fazer uso da fonte. Dentro desse arquivo há diferentes tipos de formatos do arquivo referente a fonte:
+        <br>
+        <ul>
+            <li style="font-family: kg-happy;">Opentype (.otf);</li>
+            <li style="font-family: kg-happy;">Trutype (.ttf);</li>
+            <li style="font-family: kg-happy;">Embedded-opentype;</li>
+            <li style="font-family: kg-happy">Truetype-aat (Apple Advenced Typography);</li>
+            <li style="font-family: kg-happy;">SVG.</li>
+        </ul>
+        </p>
+        <h2>Alinhamento de texto</h2>
+        <p>Existe 4 tipos de alinhamento de texto: 'left', 'right', 'center' e 'justify'.
+        <br>
+        Esses parâmetros são aplicados pela ferramenta <mark>"text-align:"</mark>. Além disso podemos também inserir o espaçamento no início da linha com a primeira letra do paragráfo usando a ferramenta <mark>"text-indent:"</mark> e aplicando a quantidade de pixels do espaçamento.
+        </p>
+    </main>
+</body>
+</html>

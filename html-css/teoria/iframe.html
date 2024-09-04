@@ -40,8 +40,20 @@
     </p>
     <iframe srcdoc="<h1> Escolha uma das opções para ser exibida aqui</h1>" frameborder="1"name="navegadorzinho"></iframe>
     <h2>Seguraça com os iframes</h2>
-    <p>Como podemos carregar outros sites de origem desconhecida, dentro do nosso próprio site, isso deixa o site vulnerável. Para fortificar as barreiras e bloquear ações maliciosas podemos utilizar a configuração 'sandbox' com o valor = sandbox. Quando se coloca isso no iframe, ocorre um bloqueio do acesso dos sites externos.
+    <p>Como podemos carregar outros sites de origem desconhecida, dentro do nosso próprio site, isso deixa o site vulnerável. Para fortificar as barreiras e bloquear ações maliciosas podemos utilizar a configuração do atributo'sandbox' com o valor = sandbox. Quando se coloca isso no iframe, ocorre um bloqueio do acesso dos sites externos. Outroatributo que complementa o 'sandbox' é o 'referrerpolicy' que recebe valores como o no-referrer, fazendo com que o conteúdo carregado dentro do iframe não vai coletar qualquer tipo de informaçõ do usuário.
     </p>
     <iframe src="" frameborder="1" sandbox="sandbox"></iframe>
+    <h2>Incorporando diferentes iframes</h2>
+    <p>Podemos incorporar alguns iframes muito úteis para o site, de forma rápida e prática. Podemos incorporar vídeos, mapas, documentos entre outros. Para isso basta encontrar o vídeo/mapa/documento e copiar a formação gerada no compartilhar de cada um deles. Segue exemplos abaixo:
+    </p>
+    <br>
+    <h3>Vídeos</h3>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dzhJsc1YszU?si=3KeLDA3r-irb99Kl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br>
+    <h3>Mapas</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235215.31679548448!2d-47.51560287500002!3d-22.9045419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8bb0a1f853d2b%3A0x6e48e59bd6926cf6!2sFazendinha%20Resort%20Prive!5e0!3m2!1spt-BR!2sbr!4v1725406824375!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br>
+    <h3>Documentos</h3>
+    <iframe src="https://docs.google.com/document/d/14EQBGSK-DdHM7NlqlpAKAx805kplLdfe/pub?embedded=true"></iframe>
 </body>
 </html>

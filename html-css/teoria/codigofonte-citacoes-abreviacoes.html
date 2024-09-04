@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo-padrao.css">
+    <title>Outras formatações</title>
+</head>
+<body>
+    <main>
+        <h1>Outras formatações</h1>
+        <h2>Código-fonte</h2>
+        <p>Dentro do mundo da programação códigos são compartilhados a todo tempo em multiplas linguagens, por conta disso existe a tag &lt;code&gt; da HTML, onde delimita a região que contém código de alguma linguagem de programação. Sua principal vantagem semântica, é que essa tag indica ao navegador que tal trecho se trata de um código de computador (exibindo efeito visual tornando as letras monospace).
+            <br>
+            <p>
+                <code>
+            let numbers = [5, 3];
+            function ArrayOrdem(){
+            console.log(numbers.reverse())
+            }
+            ArrayOrdem();
+                </code>
+            </p>
+            Porém, somente essa tag não fornece a formatação do código (pois o mesmo fica extendido por toda a linha de forma contínua). Para solucionar tal situação utiliza-se a tag &lt;pre&gt; para tabular o código.
+        </p>
+        <p>Segue o exemplo:
+            <pre>
+                <code>
+            let numbers = [5, 3];
+            function ArrayOrdem(){
+            console.log(numbers.reverse())
+            }
+            ArrayOrdem();
+                </code>
+            </pre>
+        </p>
+        <h2>Citações</h2>
+        <h3>Citação simples</h3>
+        <p>Para realizar citações em HTML usa-se a tag &lt;q&gt;, e o texto que estiver dentro dessa tag recebe automáticamente aspas duplas (não havendo deslocamento).</p>
+        <p>Exemplo: Segundo Nelson Mandela <q>A maior glória de viver não está em nunca cair, mas em nos levantar toda vez que caímos.</q></p>
+        <h3>Citação em bloco</h3>
+        <p>Utilizado para realizar citações mais longas e que tenham um parafrágo só para si. Para realizar tal ação usa-se a tag &lt;blockquote&gt;,que faz com que o texto recue automáticamente, podendo também colocar um link para o texto original, usando o parâmetro <strong>cite</strong> dentro da tag.</p>
+        <p>Exemplo: ... podemos ver isso em uma passagem do livro "A mente em paz, de tudo é capaz" de Danilo H. Gomes, onde o autor diz:
+            <blockquote cite= "https://play.google.com/store/books/?utm_source=latam_Med&utm_medium=hasem&utm_content=Feb0217&utm_campaign=Evergreen&pcampaignid=MKT-DR-latam-br-1002290-Med-hasem-bk-Evergreen-Feb0217-Text-Institucional&gclid=CjwKCAiA7dKMBhBCEiwAO_crFKzvECS4t85UMncv9UyyamjvPBUFIF0gRhQh5-r_OF9_2v2CdphSWhoCYXMQAvD_BwE&gclsrc=aw.ds">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sequi nemo ipsa explicabo dolores repudiandae quod qui ratione temporibus illo eligendi iure possimus ad, non eaque, at eius sapiente reprehenderit?
+            </blockquote>
+        </p>
+        <h2>Abreviações</h2>
+        <p>Utilizada para abreviar as palavras a tag &lt;abbr&gt; pode abreviar frases/palavras, deixando claro para o usuário e os mecanismos de busca o significado da mesma. Dentro do title se insere a  palavra a ser abreviada.</p>
+        <p>Exemplo: Podemos abreviar o nome da série "Game of thrones" para <abbr title="Game Of Thrones">GOT</abbr></p>
+        <h2>Texto invertido</h2>
+        <p>Essa funcionalidade é operada pela taga &lt;bdo&gt;, que possui um parâmetro (dir) responsável por direcionar o sentido do texto a ser invertido, sendo dois sentidos possíveis: RTL = right-to-left, e LTR = left-to-right.</p>
+        <p>Exemplo: <bdo dir="ltr" > Quero ficar rica logo!</bdo>; <bdo dir="rtl"> Quero ficar rica logo</bdo></p>
+    </main>
+
+</body>
+</html>

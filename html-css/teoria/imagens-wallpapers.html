@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo-padrao.css">
+    <title>Sobre imagens</title>
+</head>
+<body>
+    <h1>Imagens e direitos autorais!</h1>
+    <hr>
+    <p>Para utilizar imagens no seu site é necessário atentar-se sobre a questão de direitos autorais.
+        <br> No Google&reg; no setor de imagens existe um botão escrito "ferramentas" nele é possível filtrar as imagens cujo em teoria são livres de direitos autorais.
+        <br> Além do Google&reg; também existem outros sites cujo o conteúdo por imagem livre de direitos autorais é fornecido, segue a listra abaixo:
+        <br> Unsplash;
+        <br> Pexels;
+        <br> FreePik;
+        <br> Pixabay;
+        <br> Libreshot;
+        <br> Wikimidia Commons, dentre outros.</p>
+    <p>Existem vários formatos de imagem, dentre esses formatos os mais utilizados são JPEG e PNG.</p>
+    <p>O JPEG é um formato de imagem utilizado para gerar imagens extremamente reduzidas</p>
+    <p>Já o PNG é um formato compacto (porém nem tanto quanto o JPEG), sua principal caracteristica é a capacidade de se configurar opacidade gerando trasparência!</p>
+    
+    <h1>Imagens de Fundo</h1>
+        <p>Podemos adicionar imagens como tema de fundo da nossa página web.
+            <br>
+            Para isso é necessário utilizarmos a seguinte estrutura de tags:
+            <br>
+            <code>
+                background-image: url('caminho da imagem');
+            </code>
+            <br>
+            <div class="quadrado" id="q1"></div>
+            <div class="quadrado" id="q2"></div>
+            <div class="quadrado" id="q3"></div>
+            <br>
+            Entretanto nem todas imagens serão ou ficaram de forma adequada/requerida. Por conta disso é possível personalizar a aplicação da imagem no fundo:
+            <br>
+            <code>
+                background-size: 100px 'cover' 'contain';
+                <br>
+                background-repeat: 'no-repeat' 'repeat' 'repeat-x' 'repeat-y';
+                <br>
+                background-position: 'center center';
+                <br>
+                background-attachment: 'scrool' 'fixed';
+            </code>
+            <br>
+            Podemos também compactar e simplificar todas essas propriedades com a shorthand 'background', onde iremos declarar todas as propriedades acima exceto a background-size. Sendo assim declaramos da seguinte maneira:
+            <code>
+                background: color image position repeat attachment;
+            </code>
+        </p>
+        <h2>Centralização vertical de caixas</h2>
+        <p>Para centralizar verticalmente uma caixa dentro da outra, é necessário que a caixa 'container' (caixa externa) tenha sua propriedade de posição (position) relativa a caixa 'conteúdo' (caixa interna - aquela que é centralizada) que por sua vez terá sua posição absoluta sobre a caixa container. Segue o exemplo abaixo:</p>
+        <br>
+            <div class="container">
+                    CONTAINER
+                <div class="conteudo">
+                    CONTEÚDO
+                </div>
+            </div>
+        <p>Visto que o canto superior esquerdo da caixa conteudo é o ponto de referência, é necessário realizar uma transformação, cujo consiste em movimentar o conteúdo utilizando a propriedade 'transform'.</p>
+</body>
+</html>

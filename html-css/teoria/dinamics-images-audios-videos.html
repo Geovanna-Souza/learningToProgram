@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo-padrao.css">
+    <title>Imagens dinâmicas</title>
+</head>
+<body>
+    <h1>Imagens dinâmicas, audio e vídeo em HTML5</h1>
+    <p>Visto que os conteúdos dos sites na internet podem ser acessados através de diversos tipos de aparelhos eletrônicos, que possuem diferentes tamanhos de display é necessário adaptar os arquivos de mídia para cada aparelho.</p>
+    <h2>Imagens flexiveis</h2>
+    <p>O primeiro passo para realizar a adaptação do conteúdo do site é gerar imagens de tamanhos diferentes (já que o site vai ser acessado por diferentes tipos de aparelhos) e fazer com que o navegador selecione e carregue a imagem que melhor cabe para tal display.
+    <br>
+    Para realizar tal tarefa é necessário fazer uso das tags &lt;picture&gt; e &lt;source&gt;. A tag &lt;picture&gt; permite que seja criada varias fontes de imagem para serem utilizadas. É importante lembrar que é necessário organizar as imagens de forma crescente de tamanho dentro da tag. Abaixo temos um exemplo de como fazer tal tarefa:
+    </p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="p-m-g-images/tamanho-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="p-m-g-images/tamanho-m.png" type="image/png">
+        <img src="p-m-g-images/tamanho-g.png" alt="imagem flexivel">
+    </picture>
+    <h2>Áudio</h2>
+    <p>Para reproduzir arquivos de áudios basta usar a tag &lt;audio&gt; companhada da tag &lt;source&gt; (novamente), assim o site vai ser capaz de reproduzir qualquer áudio. Importânte dar uma resalva sobre direitos autorais e o tamanho do áudio. Por fim, é possível (e recomendado) adicionar diferentes tipos do mesmo áudio, pois certos navegadores não reproduzem mp3 por exemplo, sendo assim com outro tipo  de áudio (como wav(muito pesado) e ogg) após não reproduzir o primeiro, o navegador vai tentar reproduzir o próximo, por conta disso atente-se na ordem dos arquivos.
+    <br>
+    Segue abaixo um exemplo de como adicionar arquivos de áudio no site:</p>
+    <audio preload="metadata" autoplay>
+        <source src="Fix Bayonets - United States Marine Band.mp3" type="audio/mpeg">
+    </audio> 
+    <!-- Aqui de forma automática reproduz o primeiro arquivo de áudio, e abaixo temos um arquivo de áudio com controles digitais na página.-->
+    <audio src="Leslie's Strut (Sting) - John Deley and the 41 Players.mp3" controls></audio>
+    <p>Nesse exemplo temos outra maneira de reproduzir áudio, entretanto nem todos os navegadores conseguem reproduzi-lo.</p>
+    <p>Como a tentativa de reproduzir um segundo áudio acima pode falhar nesse navegador, por favor <a href="Fix Bayonets - United States Marine Band.mp3" download="Fix-bayonets-by-the-marines-band" type="audio/mpeg">clique aqui para baixar o 2° áudio dessa página.</a></p>
+    <p>Como podemos ver dentro da HTML a tag &lt;audio&gt; é acompanhada de alguns novos atributos. O preload é um atributo que indica se o áudio será pré-carregado ou não recebendo 3 possíveis valores/respostas, sendo eles: 'metadata' (carrega apenas informações do arquivo, como tamanho, tempo, informações de direitos); 'none' (não carrega nada até o usuário clicar no play); 'auto' (é o padrão, que carrega o arquivo de áudio inteiro assim quando a página é carregada, mesmo que o usuário nunca aperte play).
+    <br>
+    Já o atributo 'controls' disponibiliza um player na tela. O atributo 'autoplay' por sua vez, inicia a reprodução do arquivo de áudio assim que a página é carregada. Por fim o atributo 'loop' repete o áudio eternamente enquanto o usuário estiver na página.
+    </p>
+    <h2>Vídeos</h2>
+    <p>Para inserir vídeos no site, utilizamos a tag &lt;video&gt;, dentro dele podemos inserir uma tag já conhecida que é a &lt;source&gt;, os atributos 'controls', 'width', 'poster' e 'type'. Abaixo temos um exemplo:</p>
+    <video width="350" poster="p-m-g-images/cavalo-thumb-nail.jpg" controls>
+        <source src="Cavalinho-Video-webm.webm" type="video/webm">
+        <source src="Cavalinho-Video-1.m4v" type="video/mp4">
+        <source src="cavalinho-video.mp4" type="video/mp4">
+        <p>Caso você esteja vendo essa mensagem, seu dispositivo não consegue reproduzir o arquivo de vídeo.</p>
+    </video>
+    <p>Também é possível incorporar vídeos externos, visto que hospedar vídeos no próprio site pode sair MUITO caro, e uma alternativa mais econômica é através da incorporação de vídeos de plataformas como o Youtube e também o Vimeo. Segue abaixo um exemplo:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/a6wxTZvQcBA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h1>Aqui temos um favicon nessa aba!</h1>
+    <hr>
+    <p>Aqui foi adicionado um ícone favicon. Esse ícone pode ser feito de diversas maneiras.</p>
+    <p>Segue a lista de sites:
+        <br> 
+        IconArchive;
+        <br>
+        Favicon.cc; 
+        <br> 
+        Favicon.io</p>
+    <p>Para inserir o favicon na aba é necessário ir na região de configurações do documento (head), e inserir o comando 'link:favicon' e adicionar uma imagem de icone na região do parâmetro 'href'</p>
+</body>
+</body>
+</html>
