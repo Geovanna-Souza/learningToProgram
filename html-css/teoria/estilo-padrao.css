@@ -18,6 +18,7 @@
 
 html, body{
     min-height: 100vh;
+    min-width: 98vw;
     font-family: var(--fonteTexto);
     font-weight: lighter;
     background-color: 255, 253, 208;
@@ -30,28 +31,37 @@ html, body{
 header > h1{
     color: black;
     background-color: var(--cor3);
-    border-radius: 10px 10px 0px 0pxpx;
-    height: 30px;
+    border-radius: 10px 10px 0px 0px;
+    height: 100%;
     padding: 10px 0px;
-}
-
-main{
-    background-color: var(--cor1);
-    border: 3px solid white;
-    border-radius: 7px;
-    padding: 20px 10px;
-}
-
-a{
-    text-decoration: none;
-    color: white;
-    
+    line-height: 1em;
 }
 
 nav{
    background-color: var(--cor2);
    color: wheat;
    border-radius: 0px 0px 7px 7px;
+}
+main{
+    background-color: var(--cor1);
+    border: 3px solid white;
+    border-radius: 7px 7px 0px 0px;
+    padding: 20px 10px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    text-decoration: underline;
+}
+
+a:hover{
+    background-color: var(--cor2);
+    border-radius: 5px;
+}
+
+a:visited{
+    color: var(--cor3);
 }
 
 h1{
@@ -60,6 +70,7 @@ h1{
     text-align: center;
     font-size: 2.5em;
     margin: auto;
+    padding-bottom: 10px;
 }
 
 h2{
@@ -79,17 +90,9 @@ h3{
     padding-right: 5px;
 }
 
-p{
-    
+p{ 
     padding: 5px 10px;
     text-indent: 10px;
-}
-
-.centerIframe {
-    width: 100%;
-  min-height: 400px;
-  display: flex;
-  justify-content: center;
 }
 
 span{
@@ -110,4 +113,43 @@ li{
     display: inline-block;
     padding: 5px 90px;
     margin: auto;
+}
+
+.listasTexto{
+    display: inline;
+    padding-inline: 10px;
+    width: 100%;
+}
+
+
+pre{
+    font-size: 1.7vw;
+    width: clamp(90%);
+    text-wrap: pretty;
+    text-align: start;
+    margin: auto;
+    padding: 0px;
+    border: 0px;
+    line-height: 0,8em;
+}
+
+iframe{
+    width: 100%;
+    height: 500px;
+}
+.centerIframe {
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+footer > p{
+    color: black;
+    background-color: var(--cor3);
+    border-radius: 0px 0px 10px 10px;
+    width: 99wv;
+    height: 100%;
+    line-height: 1em;
+    font-family: var(--fonteTexto);
+    text-align: center;
 }

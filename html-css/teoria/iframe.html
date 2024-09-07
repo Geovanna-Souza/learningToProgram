@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iframe</title>
     <link rel="stylesheet" href="estilo-padrao.css">
 </head>
+
 <body>
     <header>
         <h1>HTML5 & CSS3 LEARNING</h1>
@@ -15,69 +17,116 @@
                 <li><a href="">Imagens</a></li>
                 <li><a href="">Projetos</a></li>
                 <li><a href="">Sobre</a></li>
-                </ul>
+            </ul>
         </nav>
     </header>
     <main>
         <h1>Iframe e suas utilidades</h1>
-        <p>Iframes são um "frame inline" que projetam/reproduzem um quadro online, ou seja, uma jenela que projeta outra página web dentro da pagina atual</p>
+        <p>Iframes são um "frame inline" que projetam/reproduzem um quadro online, ou seja, uma jenela que projeta outra
+            página web dentro da pagina atual</p>
         <h2>Testando o iframe</h2>
-        <p>O iframe é composto principalmente por uma 'source' que contém a url o site externo a ser exibido, um 'frameborder' que deixa ou não as bordas da caixa e o 'title' que serve para identificar o iframe em questão.</p>
+        <p>O iframe é composto principalmente por uma 'source' que contém a url o site externo a ser exibido, um
+            'frameborder' que deixa ou não as bordas da caixa e o 'title' que serve para identificar o iframe em
+            questão.</p>
         <br>
-        <span><mark>Observação:</mark> Como alguns dispositivos de celular não suportam o iframe, é interessante deixar uma mensagem ao usuário e/ou um link para redirecioná-lo</span>
-        <p>Um iframe por padrão tem suas dimenções de exibição em 350x150 pixels, mas isso pode ser editado individualmente ou nas CSS que são soberanas em relação ao método anterior.</p>
-        <p>Aqui temos um exemplo de iframe mostrando a definição do  mesmo pelo W3Schools =
+        <span><mark>Observação:</mark> Como alguns dispositivos de celular não suportam o iframe, é interessante deixar
+            uma mensagem ao usuário e/ou um link para redirecioná-lo</span>
+        <p>Um iframe por padrão tem suas dimenções de exibição em 350x150 pixels, mas isso pode ser editado
+            individualmente ou nas CSS que são soberanas em relação ao método anterior.</p>
+        <p>Aqui temos um exemplo de iframe mostrando a definição do mesmo pelo W3Schools =
         <div class="centerIframe">
             <iframe src="https://www.w3schools.com/html/html_iframe.asp" frameborder="0" title="iframe-exemplo">
-            arquivo incompatível com seu disposítivo, acesse <a href="https://www.w3schools.com/html/html_iframe.asp" target="_blank" rel="external"> para visualizar</a>
+                arquivo incompatível com seu disposítivo, acesse <a
+                    href="https://www.w3schools.com/html/html_iframe.asp" target="_blank" rel="external"> para
+                    visualizar</a>
             </iframe>
         </div>
         </p>
         <h2>Barra de rolagem</h2>
-        <p>Podemos também adicionar, ou não, barras de rolagem nos iframes através do parâmetro 'scrolling' que recebe os seguintes valores: auto - é o padrão e quando o conteúdo excede o tamanho do frame ele automáticamente adiciona a barra de rolagem; yes - adiciona a barra de rolagem mesmo sem o conteúdo exceder o tamanho do frame; e o no - não permite rolagem no frame.</p>
+        <p>Podemos também adicionar, ou não, barras de rolagem nos iframes através do parâmetro 'scrolling' que recebe
+            os seguintes valores: <mark>auto</mark> - é o padrão e quando o conteúdo excede o tamanho do frame ele
+            automáticamente adiciona a barra de rolagem; <mark>yes</mark> - adiciona a barra de rolagem mesmo sem o
+            conteúdo exceder o tamanho do frame; e o <mark>no</mark> - não permite rolagem no frame.</p>
+        <pre>
+            <code>&lt;iframe src="www.algumsite.com" frameborder="0" scrolling="auto/yes/no">&lt;iframe&gt;</code>
+        </pre>
         <h2>Iframe ou DIV?</h2>
-        <p>A maior vantagem do iframe, é a exibição de uma página com outra estrutura, outros estilos, outro design sem ter que alterar tudo isso na página local. Isso é muito vantajoso para exibir páginas locais no atual documento.
-        <br>
-        Caso contrário, caso o conteúdo seja diretamente relacionado ao contexto sendo descrito na página, a div provavelmente é a melhor opção.
-        <br>
-        <span><mark>Observação:</mark> O iframe gera um problema de indexação e relacionamento do conteúdo do site pelos mecanismos de busca quando usado, por conta disso é importânte avaliar quando deve- usado.</span>
+        <p>A maior vantagem do iframe, é a exibição de uma página com outra estrutura, outros estilos, outro design sem
+            ter que alterar tudo isso na página local. Isso é muito vantajoso para exibir páginas locais no atual
+            documento.
+            <br>
+            Caso contrário, caso o conteúdo seja diretamente relacionado ao contexto sendo descrito na página, a div
+            provavelmente é a melhor opção.
+            <br>
+            <span><mark>Observação:</mark> O iframe gera um problema de indexação e relacionamento do conteúdo do site
+                pelos mecanismos de busca quando usado, por conta disso é importânte avaliar quando deve- usado.</span>
         </p>
-       <h2>Navegação com o Iframe</h2>
-        <p>Com o iframe podemos exibir mais de uma página no mesmo frame, assim tornando seu uso mais interessante. Para isso é necessário conectar os links âncoras com o iframe, direcionando o target da âncora para o iframe que tem que ser identificado de alguma maneira = receber um parâmetro 'name' onde será atribuído um nome para o iframe que exibirá o conteúdo do link e/ou página local ou do mesmo repositório. Segue um exemplo abaixo.
+        <h2>Navegação com o Iframe</h2>
+        <p>Com o iframe podemos exibir mais de uma página no mesmo frame, assim tornando seu uso mais interessante. Para
+            isso é necessário conectar os links âncoras com o iframe, direcionando o target da âncora para o iframe que
+            tem que ser identificado de alguma maneira = receber um parâmetro 'name' onde será atribuído um nome para o
+            iframe que exibirá o conteúdo do link e/ou página local ou do mesmo repositório. Segue um exemplo abaixo.
         </p>
-            <ul>
-                <li><a href="https://www.gsuplementos.com.br/whey-protein-concentrado-1kg-growth-supplements-p985936?srsltid=AfmBOoqC8XKnGh0xY0EMXY1Ri5EI3c-pRSrWr-3YxJuEkITtAz2MPdUd" target="navegadorzinho">Compre whey da growth é o melhor suplemento</a></li>
-                <li><a href="https://www.duxhumanhealth.com/multivitaminico-pote30caps/p?network=x&utm_source=google&utm_medium=cpc&utm_campaign=conversao-aquisicao-google-pmax-dux-sazonais_&utm_content=&utm_term=-&cupom=clientevip15&gad_source=1&gclid=Cj0KCQjw28W2BhC7ARIsAPerrcJltVzU5biY7FU-vTeXFTDucXenIyfG98OwgQnRNvXE7IEyRvWJaxAaApF7EALw_wcB" target="navegadorzinho">Melhor multivitamínico</a></li>
-            </ul>
+        <ul>
+            <li><a href="https://www.gsuplementos.com.br/whey-protein-concentrado-1kg-growth-supplements-p985936?srsltid=AfmBOoqC8XKnGh0xY0EMXY1Ri5EI3c-pRSrWr-3YxJuEkITtAz2MPdUd" target="navegadorzinho">Compre whey da growth é o melhor suplemento</a></li>
+            <li><a href="https://www.duxhumanhealth.com/multivitaminico-pote30caps/p?network=x&utm_source=google&utm_medium=cpc&utm_campaign=conversao-aquisicao-google-pmax-dux-sazonais_&utm_content=&utm_term=-&cupom=clientevip15&gad_source=1&gclid=Cj0KCQjw28W2BhC7ARIsAPerrcJltVzU5biY7FU-vTeXFTDucXenIyfG98OwgQnRNvXE7IEyRvWJaxAaApF7EALw_wcB" target="navegadorzinho">Melhor multivitamínico</a></li>
+        </ul>
         <div class="centerIframe">
             <iframe src="" frameborder="0" name="navegadorzinho"></iframe>
         </div>
         <h2>Conteúdo do iframe por código</h2>
-        <p> Quando iniciamos a página o iframe inicia-se vazia (como podemos ver acima), para que não fique um espaço em branco por padrão, podemos substituir o parâmetro 'src' pelo 'srcdoc'. Esse parâmetro aceita HTML como valor e é o conteúdo inicial e estático a ser implementado.
+        <p> Quando iniciamos a página o iframe inicia-se vazia (como podemos ver acima), para que não fique um espaço em
+            branco por padrão, podemos substituir o parâmetro 'src' pelo 'srcdoc'. Esse parâmetro aceita HTML como valor
+            e é o conteúdo inicial e estático a ser implementado.
         </p>
         <div class="centerIframe">
-            <iframe srcdoc="<h1> Escolha uma das opções para ser exibida aqui</h1>" frameborder="0"name="navegadorzinho"></iframe>
+            <iframe srcdoc="<h1> Escolha uma das opções para ser exibida aqui</h1>" frameborder="1"
+                name="navegadorzinho"></iframe>
         </div>
+        <pre>
+            <code>
+            &lt;div class="centerIframe">
+            &lt;iframe srcdoc="&lt;h1&gt;Escolha uma das opções para ser exibida aqui &lt/h1&gt;" frameborder="0" name="navegadorzinho">&lt;/iframe&gt;
+            &lt;/div&gt;</code>
+        </pre>
         <h2>Seguraça com os iframes</h2>
-        <p>Como podemos carregar outros sites de origem desconhecida, dentro do nosso próprio site, isso deixa o site vulnerável. Para fortificar as barreiras e bloquear ações maliciosas podemos utilizar a configuração do atributo'sandbox' com o valor = sandbox. Quando se coloca isso no iframe, ocorre um bloqueio do acesso dos sites externos. Outroatributo que complementa o 'sandbox' é o 'referrerpolicy' que recebe valores como o no-referrer, fazendo com que o conteúdo carregado dentro do iframe não vai coletar qualquer tipo de informaçõ do usuário.
+        <p>Como podemos carregar outros sites de origem desconhecida, dentro do nosso próprio site, isso deixa o site vulnerável. Para fortificar as barreiras e bloquear ações maliciosas podemos utilizar a configuração do atributo<mark>sandbox</mark> com o valor = sandbox. Quando se coloca isso no iframe, ocorre um bloqueio do acesso dos sites externos. Outro atributo que complementa o sandbox é o <mark>referrerpolicy</mark> que recebe valores como o no-referrer, fazendo com que o conteúdo carregado dentro do iframe não vai coletar qualquer tipo de informações do usuário.
         </p>
         <div class="centerIframe">
-            <iframe src="" frameborder="0" sandbox="sandbox"></iframe>
+            <iframe src="https://acervolima.com/html-atributo-sandbox/" frameborder="1" sandbox="sandbox" name="secureIframe"></iframe></iframe>
         </div>
+        <pre>
+            <code>
+            &lt;div class="centerIframe">
+            &lt;iframe&gt; src="" frameborder="0" sandbox="sandbox">&lt;/iframe&gt;
+            &lt;/div&gt;
+            </code>
+        </pre>
         <h2>Incorporando diferentes iframes</h2>
-        <p>Podemos incorporar alguns iframes muito úteis para o site, de forma rápida e prática. Podemos incorporar vídeos, mapas, documentos entre outros. Para isso basta encontrar o vídeo/mapa/documento e copiar a formação gerada no compartilhar de cada um deles. Segue exemplos abaixo:
+        <p>Podemos incorporar alguns iframes muito úteis para o site, de forma rápida e prática. Podemos incorporar
+            vídeos, mapas, documentos entre outros. Para isso basta encontrar o vídeo/mapa/documento e copiar a formação
+            gerada no compartilhar de cada um deles. Segue exemplos abaixo:
         </p>
         <br>
-            <h3>Vídeos</h3>
-             <div class="centerIframe"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dzhJsc1YszU?si=3KeLDA3r-irb99Kl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-             <br>
-            <h3>Mapas</h3>
-             <div class="centerIframe"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235215.31679548448!2d-47.51560287500002!3d-22.9045419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8bb0a1f853d2b%3A0x6e48e59bd6926cf6!2sFazendinha%20Resort%20Prive!5e0!3m2!1spt-BR!2sbr!4v1725406824375!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-             <br>
-            <h3>Documentos</h3>
-             <div class="centerIframe">
-                <iframe src="https://docs.google.com/document/d/14EQBGSK-DdHM7NlqlpAKAx805kplLdfe/pub?embedded=true"></iframe>
-            </div>
-        </main>
+        <h3>Vídeos</h3>
+        <br>
+        <div class="centerIframe"><iframe width="560" height="315"
+                src="https://www.youtube-nocookie.com/embed/dzhJsc1YszU?si=3KeLDA3r-irb99Kl"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <br>
+        <h3>Mapas</h3>
+        <br>
+        <div class="centerIframe"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235215.31679548448!2d-47.51560287500002!3d-22.9045419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8bb0a1f853d2b%3A0x6e48e59bd6926cf6!2sFazendinha%20Resort%20Prive!5e0!3m2!1spt-BR!2sbr!4v1725406824375!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <h3>Documentos</h3>
+        <br>
+        <div class="centerIframe">
+            <iframe
+                src="https://docs.google.com/document/d/14EQBGSK-DdHM7NlqlpAKAx805kplLdfe/pub?embedded=true"></iframe>
+        </div>
+    </main>
 </body>
+
 </html>
