@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,35 +8,96 @@
     <link rel="stylesheet" href="estilo-padrao.css">
     <title>CSS e as cores</title>
 </head>
+
 <body>
-    <h1>Exemplo de cores</h1>
-    <h2 style="background-color: blue; color: white;">Primeiro exemplo</h2>
-    <p>Nesse título aplicamos as cores por nome, como já tínhamos feito anteriorente.</p>
-    <h2 style="background-color: #0000ff; color: #ffffff;">Segundo exemplo</h2>
-    <p>Aqui nesse título, temos a representação das cores em hexadecimais. Hexadecimais é um tipo de algarismo utilizado aqui, para representar cores.</p>
-    <h2 style="background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);">Terceiro exemplo</h2>
-    <p>Já aqui  temos a representação de cores através da inserção de valores em RBG.</p>
-    <h2 style="background-color: hsla(240, 38%, 54%, 0.295); color: hsla(0, 0%, 100%, 0.63);">Quarto exemplo</h2>
-    <p>Nessa outra forma de selecionar cores temos o método de hsl, onde as mesmas são selecionadas através de 3 parâmetros, sendo eles: matis(h), saturação(s) e luminosidade(l).</p>
-    <h1>Aplicando gradientes</h1>
-    <p>Para aplicar gradientes devemos criar uma folha de estilo com a propriedade chamada "background-image" nela colocamos a função "linear-gradient" (que também pode ser de outra forma como 'circle'), dentro dessa função inserimos os parâmetros a serem usados, o 1° parâmetro é referente ao ângulo de inclinação do gradiente (pode ser aplicado em graus ou por escrito) e os parâmetros seguintes são as cores a serem usadas.</p>
-    <h1>Criando uma paleta de cores</h1>
-    <p>Para criar uma paleta de cores, podemos usar o Adobe colors (tendo suas limitações pois para salvar a paleta criada é necessário ser assinante), nele podemos escolher o tipo de harmonia que irá utilizar e pegar o código das cores da paleta e aplicar via hexadecimais. 
-    <br>
-    Além do círculo cromático, nesse site é possível extrair cores a partir de imagens na aba "extrair tema" e editar da melhror maneira. Também podendo criar degradê com as cores da imagem.
-    </p>
-    <p>Outro site onde é possível criar paletas, é o Paletton. Nele podemos fazer o mesmo que no anterior, porém seu diferencial é um simulador onde mostra as cores da paleta aplicada em um site</p>
-    <h1>Capturando cores</h1>
-    <p>Podemos capturar cores através do uso do GIMP, basta seguir os seguntes passos:
+    <header>
+        <h1>HTML5 & CSS3 LEARNING</h1>
+        <nav>
+            <ul>
+                <li><a href="">Aulas</a></li>
+                <li><a href="">Imagens</a></li>
+                <li><a href="">Projetos</a></li>
+                <li><a href="">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Exemplo de cores</h1>
+        <h2 style="background-color: blue; color: white;">Primeiro exemplo</h2>
+        <p>Nesse título aplicamos as cores por nome, como já tínhamos feito anteriorente.
+            <br>
+        Segue o exemplo:
+            <pre>
+                <code>
+                    style="background-color: blue; color: white;"
+                </code>
+            </pre>
+        </p>
+        <h2 style="background-color: #0000ff; color: #ffffff;">Segundo exemplo</h2>
+        <p>Aqui nesse título, temos a representação das cores em hexadecimais. Hexadecimais é um tipo de algarismo utilizado aqui, para representar cores.
+            <br>
+            <pre>
+                <code>
+                    style="background-color: #0000ff; color: #ffffff;"
+                </code>
+            </pre>
+        </p>
+        <h2 style="background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);">Terceiro exemplo</h2>
+        <p>Já aqui temos a representação de cores através da inserção de valores em RBG.
+            <br>
+            <pre>
+                <code>
+                    style="background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);"
+                </code>
+            </pre>
+        </p>
+        <h2 style="background-color: hsla(240, 38%, 54%, 0.295); color: hsla(0, 0%, 100%, 0.63);">Quarto exemplo</h2>
+        <p>Nessa outra forma de selecionar cores temos o método de hsl, onde as mesmas são selecionadas através de 3 parâmetros, sendo eles: matis(h), saturação(s) e luminosidade(l).
+            <br>
+            <pre>
+                <code>
+                    style="background-color: hsla(240, 38%, 54%, 0.295); color: hsla(0, 0%, 100%, 0.63);"
+                </code>
+            </pre>
+        </p>
+        <h1>Aplicando gradientes</h1>
+        <p>Para aplicar gradientes devemos criar uma folha de estilo com a propriedade chamada "background-image" nela
+            colocamos a função "linear-gradient" (que também pode ser de outra forma como 'circle'), dentro dessa função
+            inserimos os parâmetros a serem usados, o 1° parâmetro é referente ao ângulo de inclinação do gradiente
+            (pode ser aplicado em graus ou por escrito) e os parâmetros seguintes são as cores a serem usadas.
+            <br>
+            <pre>
+                <code>
+                    &lt;style&gt;
+                        *{
+                            height: 100%;
+                        }
+                        body{
+                            background-image: linear-gradient(120deg, #D93FE8, #B241F2, #7D47DB, #5241F2, #3F5CE8);
+                            background-attachment: fixed;
+                            text-align:justify;
+                        }
+                    &lt;/style&gt;
+                </code>
+            </pre>
+        </p>
+        <h1>Criando uma paleta de cores</h1>
+        <p>Para criar uma paleta de cores, podemos usar o <a href="https://color.adobe.com/pt/create/color-wheel" target="_blank">Adobe colors</a> (tendo suas limitações pois para salvar a paleta criada é necessário ser assinante), nele podemos escolher o tipo de harmonia que irá utilizar e pegar o código das cores da paleta e aplicar via hexadecimais.
+            <br>
+        Além do círculo cromático, nesse site é possível extrair cores a partir de imagens na aba "extrair tema" e editar da melhor maneira. Também podendo criar degradê com as cores da imagem.
+        </p>
+        <p>Outro site onde é possível criar paletas, é o <a href="https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF" target="_blank">Paletton</a>. Nele podemos fazer o mesmo que no anterior, porém seu diferencial é um simulador onde mostra as cores da paleta aplicada em um site</p>
+        <h1>Capturando cores</h1>
+        <p>Podemos capturar cores através do uso do GIMP, basta seguir os seguntes passos:
         <ol type="1">
             <li>Tirar um print da cor desejada;</li>
             <li>Abrir a imagem no GIMP;</li>
             <li>Selecionar o conta gotas;</li>
             <li>E abrir o círculo cromático para pegar o código da cor.</li>
         </ol>
-    </p>
-    <p>Podemos também instalar uma extenção no chorome (na própria loja do chrome) chamada "colorzilla".</p>
+        </p>
+        <p>Podemos também instalar uma extenção no chorome (na própria loja do chrome) chamada <a href="https://chromewebstore.google.com/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=pt-BR&pli=1" target="_blank">"colorzilla"</a>.</p>
+    </main>
+</body>
 
-</body>
-</body>
 </html>

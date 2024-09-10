@@ -95,6 +95,13 @@ p{
     text-indent: 10px;
 }
 
+hr{
+    border: 2px solid var(--cor2);
+    border-radius: 3px;
+    padding: 0.5px;
+    background-color: var(--cor2);
+}
+
 span{
 font-weight: 700;
 }
@@ -115,13 +122,6 @@ li{
     margin: auto;
 }
 
-.listasTexto{
-    display: inline;
-    padding-inline: 10px;
-    width: 100%;
-}
-
-
 pre{
     font-size: 1.7vw;
     width: clamp(90%);
@@ -137,10 +137,17 @@ iframe{
     width: 100%;
     height: 500px;
 }
+
 .centerIframe {
   min-height: 400px;
   display: flex;
   justify-content: center;
+}
+
+.listasTexto{
+    display: inline;
+    padding-inline: 10px;
+    width: 100%;
 }
 
 footer > p{

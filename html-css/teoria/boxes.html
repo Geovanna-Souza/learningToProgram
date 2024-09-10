@@ -9,13 +9,13 @@
 </head>
 <body>
     <header>
-        <h1>Região de cabeçalho</h1>
+        <h1>HTML5 & CSS3 LEARNING</h1>
         <nav>
             <ul>
-                <li><a href="">Aba1</a></li>
-                <li><a href="">Aba2</a></li>
-                <li><a href="">Aba3</a></li>
-                <li><a href="">Aba4</a></li>
+                <li><a href="">Aulas</a></li>
+                <li><a href="">Imagens</a></li>
+                <li><a href="">Projetos</a></li>
+                <li><a href="">Sobre</a></li>
             </ul>
         </nav>
     </header>
@@ -33,11 +33,12 @@
         Segue abaixo uma imagem de exemplo das estruturas mencionadas:
         </p>
             <picture>
-                <source media="(max-width: 550px)" srcset="imagens-boxes/box-anatomy-P.png" type="image/png">
-                <source media="(max-width: 950px)" srcset="imagens-boxes/box-anatomy-M.png" type="image/png">
-                <img src="imagens-boxes/box-anatomy-G.png" alt="anatomia-caixa-G">
+                <source media="(max-width: 550px)" srcset="C:\Users\Gamer\learningToProgram\html-css\imagens\box-anatomy-P.png" type="image/png">
+                <source media="(max-width: 950px)" srcset="C:\Users\Gamer\learningToProgram\html-css\imagens\box-anatomy-M.png" type="image/png">
+                <img src="C:\Users\Gamer\learningToProgram\html-css\imagens\box-anatomy-G.png" alt="anatomia-caixa-G">
             </picture>
         <h2>Tipos de caixas</h2>
+        <hr>
         <h3>Caixas em Block-level</h3>
         <p>Caixa do tipo block-level são aquelas caixas que se iniciam na próxima linha e ocupam a largura total da página. Segue abaixo uma lista de algumas tags do tipo box-level:
             <ul type="square">
@@ -60,16 +61,16 @@
                 <li class="listasTexto">&lt;q&gt;</li>
             </ul>
         </p>
-        <h1>Aqui teremos alguns exemplos na prática</h1>
+        <h1 style="border: 5px solid purple; padding: 20px; line-height: 1em;">Aqui teremos alguns exemplos na prática</h1>
         <p>No título acima temos a borda(roxa escura) e um preenchimento bem largo. </p>
-        <p>Já nesse parágrafo temos mundanças no tamanho da caixa (alterando o tamanho e largura da caixa em questão).</p>
+        <p style="height: 200px; width: 150px; border:15px solid #D378FA; border-radius: 30px; border-width: 15px; padding: 25px;">Já nesse parágrafo temos mundanças no tamanho da caixa (alterando o tamanho e largura da caixa em questão).</p>
         <p>Aqui podemos ver um exemplo de Inline-level com esse link do meu <a href="https://www.instagram.com/thisisgigika/">instagram.</a></p>
-        <p><span class="observacao">OBS: </span><small>Perceba que no exemplo de Inline-level as alterações de estilos feitas são restritas apenas ao conteúdo da tag, o que não ocorre com os Block-level.</small></p>
-        <p>Nesse parágrafo a margem do texto está no modo 'auto', sendo assim esse parágrafo se encontra centralizado nesse trecho da página.
+        <p><span>OBS: </span><small>Perceba que no exemplo de Inline-level as alterações de estilos feitas são restritas apenas ao conteúdo da tag, o que não ocorre com os Block-level.</small></p>
+        <p style="outline: 5px ridge pink;">Nesse parágrafo a margem do texto está no modo 'auto', sendo assim esse parágrafo se encontra centralizado nesse trecho da página.
         <br>
-        Aqui também temos o contorno, que fica logo após a borda.
+        Aqui também temos o contorno/outline, que fica logo após a borda.
         </p>
-        <p><span>OBS:</span> <small>Por ser dependente do tamanho da margem o contorno/outline nunca ultrapassa a mesma e nem altera o valor da margem.</small></p>
+        <p><span>OBS:</span><small>Por ser dependente do tamanho da margem o contorno/outline nunca ultrapassa a mesma e nem altera o valor da margem.</small></p>
         <h1>Tags de grupamento - Semânticas</h1>
         <h2>&lt;header&gt;</h2> 
         <p>Essa é a tag utilizada para construir cabeçalhos do site. Geralmente dentro dela existe a tag &lt;nav&gt;.</p>
