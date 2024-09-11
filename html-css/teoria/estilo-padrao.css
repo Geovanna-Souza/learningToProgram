@@ -150,6 +150,53 @@ iframe{
     width: 100%;
 }
 
+.herança:hover{
+    background-color: var(--cor3);
+}
+
+div.quadrado{
+    display: inline-block;
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: wheat;
+    width: 250px;
+    height: 250px;
+}
+
+.container{
+    display: block;
+    background-color: navy;
+    height: 350px;
+    width: 500px;
+    position: relative;
+    margin: auto;
+}
+
+.conteudo{
+    display: block;
+    background-color: brown;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.listaPadrao{
+    display: block;
+}
+
+div#q1{
+    background-color: red;
+}
+
+div#q2{
+    background-image: linear-gradient(to bottom, pink, purple);
+}
+
+div#q3{
+    background-image: url(C:\Users\Gamer\learningToProgram\html-css\imagens\imagem1.png);
+}
+
 footer > p{
     color: black;
     background-color: var(--cor3);

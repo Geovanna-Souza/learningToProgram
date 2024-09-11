@@ -7,11 +7,22 @@
     <link rel="stylesheet" href="estilo-padrao.css">
     <title>Links e Âncoras</title>
 <body>
+    <header>
+        <h1>HTML5 & CSS3 LEARNING</h1>
+        <nav>
+            <ul>
+                <li><a href="">Aulas</a></li>
+                <li><a href="">Imagens</a></li>
+                <li><a href="">Projetos</a></li>
+                <li><a href="">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <h1>Links e Âncoras</h1>
         <hr>
         <p>Para criar-se hyperlinks é necessário criar âncoras através da tag &lt;a&gt;. A principal caracteristica dessa tag é seu parâmetro <strong>href=</strong> que cria uma referência hipertexto, outro parâmetro muito útil é o <strong>hreflang=</strong> que permite indicar o idioma principal do site, o que permite que o navegador e/ou softwares de tradução possão traduzir a página caso seja o desejo do usuário.</p>
-        <p>Exemplo: <a class="link-externo" href="https://www.youtube.com/watch?v=a6wxTZvQcBA&ab_channel=DeclanGilsenan">Aqui</a> tem a URL de um vídeo com uma música que estou na cabeça!</p>
+        <p>Exemplo: <a class="link-externo" href="https://www.youtube.com/watch?v=pzPElFdxMCM">Aqui</a> tem a URL de um vídeo com uma música que estou na cabeça!</p>
         <h1>Manuseando links externos</h1>
         <p>Links externos são aqueles que redirecionam o internaulta para outro site. Um exemplo desse tipo de link é o link acima.</p>
         <p>O problema de realizar a âncoragem desses links externos é que dessa maneira o usuário vai sair do site e iniciar uma nova navegação, o que não é tão bom, sendo assim é recomendado o uso do parâmetro <strong>target=</strong> contendo o "_blank" e o parâmetro <strong>rel=</strong> contendo "external". Isso serve para que o link adicionado no site não seja sobreposto sobre o próprio site, assim abrindo uma nova aba com o novo conteúdo.</p>
@@ -42,8 +53,8 @@
         </p>
         <h1>Manuseando links internos</h1>
         <p>Links internos fazem a relação (dentro do servidor) com outra página que diz respeito a página atual, sendo todas essas página pertencentes ao mesmo site.</p>
-        <p>Segue o exemplo a frente que redireciona essa página a uma segunda página desse mesmo site. <a class="next" href="links2.html" target="_self" rel="next">Clique aqui</a> para ir a segunda página.</p>
-        <p>Para acessar páginas que estejam em uma pasta dentro da pasta atual, basta usar o atalho control+spaceBar e selecionar a pasta na qual a página se encontra, isso ocorre <a class="next" href="sessão-site/links3.html" target="_self" rel="next">aqui</a> para ir a página 3.</p>
+        <p>Segue o exemplo a frente que redireciona essa página a uma segunda página desse mesmo site. <a class="next" href="listas.html" target="_self" rel="next">Clique aqui</a> para ir a segunda página.</p>
+        <p>Para acessar páginas que estejam em uma pasta dentro da pasta atual, basta usar o atalho control+spaceBar e selecionar a pasta na qual a página se encontra, isso ocorre <a class="next" href="codigofonte-citacoes-abreviacoes.html" target="_self" rel="next">aqui</a> para ir a página 3.</p>
         <h1>Downloads</h1>
         <p>O processo de elaboração de um link de download no site é semelhante ao que vimos acima, tendo apenas algumas singularidades. Dentro da tag, utiliza-se o atributo "download" com o nome do arquivo e o atributo "type" reservado para diversos media types, que podem ser encontrados no <a class="download" href="https://www.iana.org/assignments/media-types/media-types.xhtml#audio" target="_blank" rel="external">site Iana</a></p>
         <ul>

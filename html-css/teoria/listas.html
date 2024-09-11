@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="estilo-padrao.css">
     <title>Listas</title>
 <body>
+    <header>
+        <h1>HTML5 & CSS3 LEARNING</h1>
+        <nav>
+            <ul>
+                <li><a href="">Aulas</a></li>
+                <li><a href="">Imagens</a></li>
+                <li><a href="">Projetos</a></li>
+                <li><a href="">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <h1>Listas em HTML</h1>
         <h2>Listas ordenadas</h2>
@@ -14,10 +25,11 @@
         <p>Para criar listas ordenads utiliza-se a tag &lt;ol&gt;, e a tag &lt;li&gt; para adicionar os itens na lista. Além disso também há o parâmetro TYPE= que configura o tipo de marcador da lista, podendo ser dos seguintes tipos: A, B, C, D... 1,2,3,4... a, b, c, d... I, II, III, IV... e i, ii, iii, iv.</p>
         <p>Por fim, também é possível selevionar o valor pelo qual a lista se inicia, utilizando o parâmetro START=.</p>
         <p>Segue abaixo um exempo de lista ordenada:</p>
-        <p><ol type="1">
-            <li>1° Passo - Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel earum soluta placeat rerum laborum modi! Laboriosam eum asperiores architecto. Iure, natus nihil sequi corrupti expedita dignissimos culpa fugiat repellat eligendi!</li>
-            <li>2°Passo - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum vel accusantium pariatur harum velit tenetur sit. Consequuntur error necessitatibus, nulla quia deleniti temporibus tenetur voluptate ut! Esse voluptate minima recusandae!</li>
-            <li>3° Passo - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates assumenda magnam nulla numquam? Error eveniet aliquid mollitia exercitationem minus nostrum expedita odit fugiat earum, praesentium consequuntur vero, quod dolorum! Eligendi!</li>
+        <p>
+            <ol type="1">
+                <li>1° Passo - Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel earum soluta placeat rerum laborum modi! Laboriosam eum asperiores architecto. Iure, natus nihil sequi corrupti expedita dignissimos culpa fugiat repellat eligendi!</li>
+                <li>2°Passo - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum vel accusantium pariatur harum velit tenetur sit. Consequuntur error necessitatibus, nulla quia deleniti temporibus tenetur voluptate ut! Esse voluptate minima recusandae!</li>
+                <li>3° Passo - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates assumenda magnam nulla numquam? Error eveniet aliquid mollitia exercitationem minus nostrum expedita odit fugiat earum, praesentium consequuntur vero, quod dolorum! Eligendi!</li>
            </ol>
         </p>
         <h2>Listas não ordenadas</h2>
@@ -38,32 +50,32 @@
         <p>Também é possível misturar listas uma dentro da outra, segue o exemplo:</p>
         <p>
             <ol type="I">
-                <li>Sumário</li>
+                <li class="listaPadrao">Sumário</li>
                     <ol type="i">
-                        <li>Introdução</li>
-                        <li>Abstract</li>
-                        <li>Resumo</li>
+                        <li class="listaPadrao">Introdução</li>
+                        <li class="listaPadrao">Abstract</li>
+                        <li class="listaPadrao">Resumo</li>
                     </ol>
                 <li>Desenvolvimento</li>
                     <ol type="i" start="4">
-                        <li>Desenvolvimeto - parte 1</li>
+                        <li class="listaPadrao">Desenvolvimeto - parte 1</li>
                             <ul type= "circle">
-                                <li>Metodologia</li>
-                                <li>Materiais e métodos</li>
+                                <li class="listaPadrao">Metodologia</li>
+                                <li class="listaPadrao">Materiais e métodos</li>
                             </ul>
-                        <li>Desenvolvimento - parte 2</li>
+                        <li class="listaPadrao">Desenvolvimento - parte 2</li>
                             <ul type="circle">
-                                <li>Metodologia - parte 2</li>
-                                <li>Materiais e métodos - parte 2</li>
+                                <li class="listaPadrao">Metodologia - parte 2</li>
+                                <li class="listaPadrao">Materiais e métodos - parte 2</li>
                             </ul>
-                        <li>Desenvolvimento - parte 3</li>
+                        <li class="listaPadrao">Desenvolvimento - parte 3</li>
                             <ul type="circle">
-                                <li>Metodologia - parte 3</li>
-                                <li>Materiais e métodos - parte 3</li>
+                                <li class="listaPadrao">Metodologia - parte 3</li>
+                                <li class="listaPadrao">Materiais e métodos - parte 3</li>
                             </ul>
                     </ol>
-                <li>Conclusão</li>
-                <li>Bibliografia</li>
+                <li class="listaPadrao">Conclusão</li>
+                <li class="listaPadrao">Bibliografia</li>
             </ol>
         </p>
         <h2>Listas de definição</h2>
