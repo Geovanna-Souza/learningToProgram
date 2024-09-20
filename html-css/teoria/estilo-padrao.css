@@ -7,10 +7,20 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Redacted+Script:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+@font-face {
+    font-family:'Minecraftia-Regular';
+    src: url('../fontes/Minecraftia-Regular.ttf');
+}
+@font-face {
+    font-family: 'Calculator';
+    src: url('../fontes/Calculator.ttf');
+}
 :root{
     --fonteTitulos: "Bebas Neue", sans-serif;
-    --fonteTexto: "Montserrat", sans-serif;
+    --fonteTexto: "Montserrat", sans-serif;   
     --cor1: #78A1C4;
     --cor2: #4D82B0;
     --cor3: #A4BFD7;
@@ -185,6 +195,9 @@ div.quadrado{
     display: block;
 }
 
+.fonteBaixada{
+    font-family: "Handlee", cursive;
+}
 div#q1{
     background-color: red;
 }

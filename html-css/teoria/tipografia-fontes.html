@@ -8,6 +8,17 @@
     <title>Fontes</title>
 </head>
 <body>
+    <header>
+        <h1>HTML5 & CSS3 LEARNING</h1>
+        <nav>
+            <ul>
+                <li><a href="">Aulas</a></li>
+                <li><a href="">Imagens</a></li>
+                <li><a href="">Projetos</a></li>
+                <li><a href="">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <h1>Tipografia e fontes</h1>
         <h2>Fontes e suas famílias</h2>
@@ -21,9 +32,7 @@
             </ul>
         </p>
         <h2>Tamanhos para fontes</h2>
-        <p>Os tamanhos usados para fontes são dividido entre: Medidas absolutas e medidas relativas.
-        <br>
-        Dentre das medidas absolutas temos:
+        <p>Os tamanhos usados para fontes são dividido entre: Medidas absolutas e medidas relativas. Dentre das medidas absolutas temos:
             <ul>
                 <li><sub>cm</sub> (centímetro);</li>
                 <li><sub>mm</sub> (milímetro);</li>
@@ -53,30 +62,41 @@
         <br>
         Já os shorthands são atalhos que simplificam as alicações dessas propriedades das CSS, para criar uma shorthand basta criar a propriedade 'font:' e aplicar as folhas de estilo, segue o exemplo:
         <br>
-            <code>
-                <pre>font: italic bold 1em Arial, Helcetica, sans-serif;
-                </pre>
-            </code>
-        É necessário lembrar que para aplicar essa propriedade corretamente é necessário seguir a ordem correta dos atributos (font-style, font-varient, font-weight, font-size e font-family)
+            <pre>
+                <code>
+                    font: italic bold 1em Arial, Helcetica, sans-serif;
+                </code>
+            </pre>
+        É necessário lembrar que para aplicar essa propriedade corretamente é necessário seguir a ordem correta dos atributos <mark>(font-style, font-varient, font-weight, font-size e font-family)</mark>
         </p>
         <h3>Usando o Google fonts</h3>
         <p>Também é possível fazer uso de fontes de origem externa, e um dos lugares a se encontrar essa fontes é no <a href="https://fonts.google.com/" target="_blank" rel="external">Google<sup>&reg;</sup> fonts.</a> Um exemplo disso é a lista abaixo:
             <ul>
-                <li style="font-family: 'Redacted Script', cursive;">Good shit!</li>
-                <li style="font-family: 'Raleway Dots', cursive;">Good Shit!</li>
-                <li style="font-family: 'Bungee Shade', cursive;">Good shit!</li>
+                <li class="fonteBaixada">Good shit!</li>
+                <li style="font-family: 'Handlee', cursive;">Good Shit!</li>
+                <li style="font-family: 'Bungee Shade', system-ui;">Good shit!</li>
             </ul>
         </p>
         <h3>Fontes externas baixadas</h3>
-        <p>Em alguns momentos podemos nos deparar com o caso onde o cliente tem a própria fonte, comprou ou simplesmente não se interresa pelas fontes presentes no Google<sup>&reg;</sup> fonts, nesse caso existe outra ferramenta na qual podemos baixar fontes, sendo ela a <a href="https://www.dafont.com/pt/" target="_blank" rel="external">dafont</a>. Após baixar o pacote de fontes desejada, é necessário criar um <mark>'@font-face'</mark> na porção 'head' e ou arquivo CSS externo para fazer uso da fonte. Dentro desse arquivo há diferentes tipos de formatos do arquivo referente a fonte:
+        <p style="font-family: Calculator;">Em alguns momentos podemos nos deparar com o caso onde o cliente tem a própria fonte, comprou ou simplesmente não se interresa pelas fontes presentes no Google<sup>&reg;</sup> fonts, nesse caso existe outra ferramenta na qual podemos baixar fontes, sendo ela a <a href="https://www.dafont.com/pt/" target="_blank" rel="external">dafont</a>. Depois de baixar o pacote de fontes desejada, é necessário criar uma <mark>'@font-face'</mark> na porção 'head' ou no arquivo de CSS externo para fazer uso da fonte. Dentro desse arquivo há diferentes tipos de formatos do arquivo referente a fonte:
         <br>
         <ul>
-            <li style="font-family: kg-happy;">Opentype (.otf);</li>
-            <li style="font-family: kg-happy;">Trutype (.ttf);</li>
-            <li style="font-family: kg-happy;">Embedded-opentype;</li>
-            <li style="font-family: kg-happy">Truetype-aat (Apple Advenced Typography);</li>
-            <li style="font-family: kg-happy;">SVG.</li>
+            <li style="font-family: Minecraftia-Regular;">Opentype (.otf);</li>
+            <li style="font-family: Minecraftia-Regular;">Trutype (.ttf);</li>
+            <li style="font-family: Minecraftia-Regular;">Embedded-opentype;</li>
+            <li style="font-family: Minecraftia-Regular">Truetype-aat (Apple Advenced Typography);</li>
+            <li style="font-family: Minecraftia-Regular;">SVG.</li>
         </ul>
+        Na folha de estilo podemos inserir a seguinte estrutura (considerando que as fontes estejam em uma pasta separadamente):
+        <pre>
+            <code>
+                @font-face {
+                    font-family:'Minecraftia-Regular';
+                    src: url('../fontes/Minecraftia-Regular.ttf');
+                }
+            </code>
+        </pre>
+        Nela determinamos o nome da fonte e apontamos o caminho do arquivo de fonte a ser usado.
         </p>
         <h2>Alinhamento de texto</h2>
         <p>Existe 4 tipos de alinhamento de texto: 'left', 'right', 'center' e 'justify'.
