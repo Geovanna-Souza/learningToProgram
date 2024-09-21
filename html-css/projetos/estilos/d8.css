@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    padding: 20px;
+}
+.pagina1{
+    background-color: rgba(128, 128, 128, 0.637);
+    color: black;
+    text-align: justify;
+}
+
+.pagina2{
+    background-color: rgba(0, 128, 0, 0.664);
+    color: white;
+    text-align: justify;
+}
+
+.pagina3{
+    background-color: rgba(255, 255, 0, 0.527);
+    color: black;
+    text-align: justify;
+}
+
+a{
+    text-align: center;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: white;
+    text-transform: capitalize;
+}

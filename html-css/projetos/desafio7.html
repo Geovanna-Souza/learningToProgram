@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicons/Darth-vader.ico.ico" type="image/x-icon">
+    <title>Desafio 7</title>
+</head>
+<body>
+    <h1>Desafio 7</h1>
+    <h2>Imagem flexível</h2>
+    <p>Nesse desafio vamos adicionar uma imagem que se adapte a difentes tamanhos de tela, podendo ser visualizada sem ser cortada em telas menores e não ficando minúscula em visores com mais pixels.</p>
+    <picture>
+        <source media="(max-width: 250px)" srcset="../imagens/art-250.jpg" type="image/jpg">
+        <source media="(max-width: 600px)" srcset="../imagens/art-500.jpg" type="image/jpg">
+        <source media="(max-width: 650px)" srcset="../imagens/art-550.jpg" type="image/jpg">
+        <source media="(max-width: 800px)" srcset="../imagens/art-700.jpg" type="image/jpg">
+        <source media="(max-width: 850px)" srcset="../imagens/art-750.jpg" type="image/jpg">
+        <img src="../imagens/art-1000.jpg" alt="img-art-full">
+    </picture>
+</body>
+</html>
