@@ -29,43 +29,54 @@
             'frameborder' que deixa ou não as bordas da caixa e o 'title' que serve para identificar o iframe em
             questão.</p>
         <br>
-        <span><mark>Observação:</mark> Como alguns dispositivos de celular não suportam o iframe, é interessante deixar
-            uma mensagem ao usuário e/ou um link para redirecioná-lo</span>
-        <p>Um iframe por padrão tem suas dimenções de exibição em 350x150 pixels, mas isso pode ser editado
-            individualmente ou nas CSS que são soberanas em relação ao método anterior.</p>
+        <span><mark>Observação:</mark> Como alguns dispositivos de celular não suportam o iframe, é interessante deixar uma mensagem ao usuário e/ou um link para redirecioná-lo</span>
+        <p>Um iframe por padrão tem suas dimenções de exibição em 350x150 pixels, mas isso pode ser editado individualmente ou nas CSS que são soberanas em relação ao método anterior.</p>
         <p>Aqui temos um exemplo de iframe mostrando a definição do mesmo pelo W3Schools =
         <div class="centerIframe">
-            <iframe src="https://www.w3schools.com/html/html_iframe.asp" frameborder="0" title="iframe-exemplo">
-                arquivo incompatível com seu disposítivo, acesse <a
-                    href="https://www.w3schools.com/html/html_iframe.asp" target="_blank" rel="external"> para
-                    visualizar</a>
+            <iframe src="https://www.w3schools.com/html/html_iframe.asp" frameborder="0" title="iframe-exemplo"> arquivo incompatível com seu disposítivo, acesse <a href="https://www.w3schools.com/html/html_iframe.asp" target="_blank" rel="external"> para visualizar</a>
             </iframe>
         </div>
         </p>
         <h2>Barra de rolagem</h2>
-        <p>Podemos também adicionar, ou não, barras de rolagem nos iframes através do parâmetro 'scrolling' que recebe
-            os seguintes valores: <mark>auto</mark> - é o padrão e quando o conteúdo excede o tamanho do frame ele
-            automáticamente adiciona a barra de rolagem; <mark>yes</mark> - adiciona a barra de rolagem mesmo sem o
-            conteúdo exceder o tamanho do frame; e o <mark>no</mark> - não permite rolagem no frame.</p>
+        <p>Podemos também adicionar, ou não, barras de rolagem nos iframes através do parâmetro 'scrolling' que recebe os seguintes valores: <mark>auto</mark> - é o padrão e quando o conteúdo excede o tamanho do frame ele automáticamente adiciona a barra de rolagem; <mark>yes</mark> - adiciona a barra de rolagem mesmo sem o conteúdo exceder o tamanho do frame; e o <mark>no</mark> - não permite rolagem no frame.</p>
         <pre>
             <code>&lt;iframe src="www.algumsite.com" frameborder="0" scrolling="auto/yes/no">&lt;iframe&gt;</code>
         </pre>
         <h2>Iframe ou DIV?</h2>
-        <p>A maior vantagem do iframe, é a exibição de uma página com outra estrutura, outros estilos, outro design sem
-            ter que alterar tudo isso na página local. Isso é muito vantajoso para exibir páginas locais no atual
-            documento.
+        <p>A maior vantagem do iframe, é a exibição de uma página com outra estrutura, outros estilos, outro design sem ter que alterar tudo isso na página local. Isso é muito vantajoso para exibir páginas locais no atual documento.
             <br>
-            Caso contrário, caso o conteúdo seja diretamente relacionado ao contexto sendo descrito na página, a div
+            Caso contrário, caso o conteúdo seja diretame relacionado ao contexto sendo descrito na página, a div
             provavelmente é a melhor opção.
             <br>
-            <span><mark>Observação:</mark> O iframe gera um problema de indexação e relacionamento do conteúdo do site
-                pelos mecanismos de busca quando usado, por conta disso é importânte avaliar quando deve- usado.</span>
+            <span><mark>Observação:</mark> O iframe gera um problema de indexação e relacionamento do conteúdo do site pelos mecanismos de busca quando usado, por conta disso é importânte avaliar quando deve- usado.</span>
         </p>
+        <h3>Centralizando Iframe</h3>
+        <p>Para torná-los flexiveis precisamos <mark>envelopar a tag contendo as informações do vídeo em uma div.</mark> A partir dai, vamos fazer configurações de estilo para os dois elementos:</p>
+        <pre>
+            <code>
+            div.video{
+                position: relative;
+                height: 0px;
+                margin-left: -20%;
+                margin-right: -20%;
+                margin-bottom: 15px;
+                padding-bottom: 59%;
+            }
+
+            div.video > iframe{
+                position: absolute;
+                top: 5%;
+                left: 5%;
+                width: 90%;
+                height: 90%;
+            }
+            </code>
+        </pre>
+        <p>A propriedade <strong>position</strong> aqui é muito importante, seu valor na div como <strong>relative</strong>, faz com que seja considerado o posicionamento atual do elemento de divisão e ele se mantenha adaptável para o caso de alteração no tamanho do navegador.
+        <br>
+        Já no <strong>iframe</strong>, usamos o posicionamento <strong>absolute</strong> para que a div - que é seu contêiner - torne-se o ponto de partida para o posicionamento do iframe. Assim podemos iniciar as configurações de deslocamento à esquerda, topo, largura, altura e todos em porcentagem de tela.</p>
         <h2>Navegação com o Iframe</h2>
-        <p>Com o iframe podemos exibir mais de uma página no mesmo frame, assim tornando seu uso mais interessante. Para
-            isso é necessário conectar os links âncoras com o iframe, direcionando o target da âncora para o iframe que
-            tem que ser identificado de alguma maneira = receber um parâmetro 'name' onde será atribuído um nome para o
-            iframe que exibirá o conteúdo do link e/ou página local ou do mesmo repositório. Segue um exemplo abaixo.
+        <p>Com o iframe podemos exibir mais de uma página no mesmo frame, assim tornando seu uso mais interessante. Para isso é necessário conectar os links âncoras com o iframe, direcionando o target da âncora para o iframe que tem que ser identificado de alguma maneira = receber um parâmetro 'name' onde será atribuído um nome para o iframe que exibirá o conteúdo do link e/ou página local ou do mesmo repositório. Segue um exemplo abaixo.
         </p>
         <ul>
             <li><a href="https://www.gsuplementos.com.br/whey-protein-concentrado-1kg-growth-supplements-p985936?srsltid=AfmBOoqC8XKnGh0xY0EMXY1Ri5EI3c-pRSrWr-3YxJuEkITtAz2MPdUd" target="navegadorzinho">Compre whey da growth é o melhor suplemento</a></li>
@@ -75,13 +86,10 @@
             <iframe src="" frameborder="0" name="navegadorzinho"></iframe>
         </div>
         <h2>Conteúdo do iframe por código</h2>
-        <p> Quando iniciamos a página o iframe inicia-se vazia (como podemos ver acima), para que não fique um espaço em
-            branco por padrão, podemos substituir o parâmetro 'src' pelo 'srcdoc'. Esse parâmetro aceita HTML como valor
-            e é o conteúdo inicial e estático a ser implementado.
+        <p> Quando iniciamos a página o iframe inicia-se vazia (como podemos ver acima), para que não fique um espaço em branco por padrão, podemos substituir o parâmetro 'src' pelo 'srcdoc'. Esse parâmetro aceita HTML como valor e é o conteúdo inicial e estático a ser implementado.
         </p>
         <div class="centerIframe">
-            <iframe srcdoc="<h1> Escolha uma das opções para ser exibida aqui</h1>" frameborder="1"
-                name="navegadorzinho"></iframe>
+            <iframe srcdoc="<h1> Escolha uma das opções para ser exibida aqui</h1>" frameborder="1" name="navegadorzinho"></iframe>
         </div>
         <pre>
             <code>
@@ -103,9 +111,7 @@
             </code>
         </pre>
         <h2>Incorporando diferentes iframes</h2>
-        <p>Podemos incorporar alguns iframes muito úteis para o site, de forma rápida e prática. Podemos incorporar
-            vídeos, mapas, documentos entre outros. Para isso basta encontrar o vídeo/mapa/documento e copiar a formação
-            gerada no compartilhar de cada um deles. Segue exemplos abaixo:
+        <p>Podemos incorporar alguns iframes muito úteis para o site, de forma rápida e prática. Podemos incorporar vídeos, mapas, documentos entre outros. Para isso basta encontrar o vídeo/mapa/documento e copiar a formação gerada no compartilhar de cada um deles. Segue exemplos abaixo:
         </p>
         <br>
         <h3>Vídeos</h3>

@@ -100,6 +100,20 @@
                 </dt>
             </dl>
         </p>
+        <h2>Personalização de listas</h2>
+        <p>Para personalizar as listas com emok=jis ou outros simbolos, utiliza-se o parâmetro <strong>list-style-type</strong>, onde atribuimos valores como os UNICODES (encontrados no emojipedia).</p>
+        <pre>
+            <code>
+            ul{
+                list-style-type:'2714\0020';
+                columms:2;
+                list-style-position: inside;
+            }
+            </code>
+        </pre>
+        <p>A marcação <strong>list-style-position</strong> faz com que os marcadores e/ou emojis sejam exibidos dentro da caixa que contém a lista (através do valor dado em questão - 'inside')
+        <br>
+        Já a marcação <strong>columms</strong> organiza em colunas os itens da lista.</p>
     </main>
 </body>
 </html>

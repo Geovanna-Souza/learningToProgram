@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo-padrao.css">
+    <link rel="shortcut icon" href="../favicons/Darth-vader.ico.ico" type="image/x-icon">
+    <title>Responsividade e váriaveis em CSS</title>
+</head>
+<body>
+    <header>
+        <h1>HTML5 & CSS3 LEARNING</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="">Aulas</a></li>
+            <li><a href="">Imagens</a></li>
+            <li><a href="">Projetos</a></li>
+            <li><a href="">Sobre</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Responsividade e variáveis em CSS</h1>
+        <h2>Largura e altura adaptáveis</h2>
+        <p>Um site responsivo é capaz de se adaptar de forma visível a diferentes tamanhos de telas. Para que nosso site se adapte mais facilmente ao tamanho da tela, uma das técnicas básicas que podem ser utilizadas é deixar algumas caixas estrategicamente um pouco mais flexíveis indicando valores mínimos e máximos.</p>
+        <pre>
+            <code>
+            exemplo-box{
+            min-width: 400px;
+            max-width: 800px;
+            min-height: 1000px;
+            max-height: 2000px;
+            }
+            </code>
+        </pre>
+        <p>Essa configuração vai garantir que a caixa em questâo não fique com mais larga que 400px (para ser melhor visualizada em telas pequenas) e nem seja maior que 800px (para telas maiores).
+        <br>
+        Para medidas entre 400px e 800px, o tamaho será adaptável e a caixa vai ocupar 100% da largura do contêiner. Isso vai facilitar bastante a adaptação do conteúdo em diversos tipos de tela.
+        <br>
+        OBS: É possível aplicar técnicas adicionas para dar ainda mais capacidade de adaptaçãodo conteúdo com as <strong>mediasqueries</strong>, com a regra @media e as caixas flexíveis como as <strong>flexboxes.</strong>
+        </p>
+        <h2>Variáveis em CSS</h2>
+        <p>Para criarmos variáveis em CSS, devemos definir uma área de definiçoes dentro do seu estilo para uma <mark>pseudo-classe</mark> chamada <strong>:root,</strong> que define as configurações para cada 'raiz de uma árvore' (vulgo a página), que se aplica a todo o documento por padrão. Para declarar uma atribuição na root, descrevemos da seguinte forma: --nomeAtributo:valor;</p>
+        <pre>
+            <code>
+            :root{
+                --corDeFundo:#c5ebd6;
+                --fonteTitulo: 'Arial, Helvetica, sans-serif';
+                --bordaSecundária: border-image-source:url(img.png);
+            }
+            </code>
+        </pre>
+        <p>A partir disso, definir cores e fontes no documento HTML, fica mais fácil e personalizavel, utilizando a função <mark>var()</mark></p>
+        <pre>
+            <code>
+            body{
+                font-family: var(--fonteTitulo);
+                color:var(--corDefundo);
+                background-color:var(--cor2);
+            }
+            </code>
+        </pre>
+        <h2>Uso do seletor * em CSS</h2>
+        <p>O asteristico (*) tem uma função muito importante e especial, pois basicamente ele aplica uma configuração padrão <mark>para todos os elementos do código HTML</mark> ao qual o estilo está sendo aplicado.
+        <br>
+        Esse seletor global pode ser usado principalmente para eliminar as eventuais margens que os navegadores adicionam a alguns elementos <mark>(user agents)</mark>, permitindo a personalização de medidas que irão ser exibidas na tela de cada elemento de forma individual.
+        </p>
+        <h2>Espaçamento entrelinhas</h2>
+        <p>Usando a propriedade <strong>line-height:</strong>, podemos atribuir o tamanho do espaço entre uma linha e outra do texto.</p>
+        <pre>
+            <code>
+            line-height: 1em;
+            </code>
+        </pre>
+    </main>
+</body>
+</html>
