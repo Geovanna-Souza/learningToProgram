@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo-padrao.css">
+    <link rel="shortcut icon" href="../favicons/Darth-vader.ico.ico" type="image/x-icon">
+    <title>Tabelas</title>
+</head>
+<body>
+    <header>
+        <h1>HTML5 & CSS3 LEARNING</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="">Aulas</a></li>
+            <li><a href="">Imagens</a></li>
+            <li><a href="">Projetos</a></li>
+            <li><a href="">Sobre</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Hierarquia de tabelas</h1>
+        <p>Para iniciar a montagem de uma tabela utilizamos a tag &lt;table&gt;. Dentro dela existe uma hierarquia a ser seguida para a montagem completa da tabela:</p>
+        <pre>
+            <code>
+                &lt;table&gt;
+                        &lt;tr&gt;TABLE ROW&lt;/tr&gt;
+                            &lt;th&gt;TABLE HEADER&lt;/th&gt;
+                                &lt;td>TABLE DATA&lt;/td&gt;
+                &lt;/table&gt;
+            </code>
+        </pre>
+        <p>Uma tabela é composta por esse 3 componentes: O <mark>table row=</mark> linha de tabela; o <mark>table header=</mark> cabeçalho de tabela; e o <mark>table data=</mark> dados de tabela.
+        <p>Para deixar a tabela com 'cara de tabela', estilizamos a mesma com CSS com os atributos que já estamos acostumados (bordas, acochoamento, fonte, margens entre outras), porém, um novo atributo a ser utilizado é o <mark>border-collapse</mark>, que serve para deixar a tabela com as células coladas.</p>
+        <h2>Alinhamento do conteúdo de tabelas</h2>
+        <p>O alinhamento do conteúdo presente na tabela é feito de duas formas: Alinhamento horizontal e alinhamento vertical.
+        <br>
+        O alinhamento horizontal é simples e consiste em utilizar o atributo <mark>'text-align:left/center/right'</mark>. Já o alinhamento vertical é feito pela propriedade <mark>'vertical-align:top/middle/bottom'</mark>.
+        </p>
+        <h2>Anatomia das tabelas</h2>
+        <p>Geralmente, em tabelas maiores, há uma anatomia básica para construir as mesmas, essa estrutura é composta por: Cabeçalho (Table Head - thead), Corpo (Table Body - tbody) e Rodapé (Table Footer - tfoot).</p>
+        <h2>Caption e escopo de título em tabelas</h2>
+        <p>O caption é a 'legenda da tabela', o título. Já o escopo é aplicado para dizer se o <mark>&lt;th&gt;</mark> é o título da coluna ou linha correspondente.</p>
+        <pre>
+            <code>
+                &lt;th scope="col"&gt; = Para colunas
+                &lt;th scope="row"&gt; = Para linhas
+            </code>
+        </pre>
+        <h2>Mesclagem de células</h2>
+        <p>Para mesclar células é necessário inserir os atributos <mark>'colspan' </mark>para <strong>mesclar colunas</strong> e <mark>'rowspan'</mark> para <strong>mesclar linhas</strong>.</p>
+        <pre>
+            <code>
+                &lt;th colspan="3"&gt; = Para colunas
+                &lt;th rowspan="3"&gt; = Para linhas
+            </code>
+        </pre>
+        <h2>Efeito zebrado</h2>
+        <p>Para melhor visualização das informações pelo usuário (principalmente em tabelas grandes), o efeito zebrado pode solucionar esse problema visual. Para aplicalo em uma tabela precisamos estilizar a tabela com uma pseudo-classe chamada <mark>:nth-child(VALORn)</mark> ficando da seguinte maneira:</p>
+        <pre>
+            <code>
+                tbody > tr:nth-child(2n){
+                    background-color: var(--cor1);
+                }  
+            </code>
+        </pre>
+        <p>Essa pseudo-classe também pode receber como valor o 'odd' (ímpar - 2n-1) ou o 'even'(par - 2n).</p>
+        <h2>Fixando o cabeçalho e personalizando colunas</h2>
+        <p>Novamente, trata-se de um recurso para facilitar a experiência do usuário, fazendo com que o cabeçalho permaneça no topo da página, mesmo já tendo sido rolado a muitas linhas atrás. Para isso é necessário ter a tabela com uma 'position:relative;' e fazer com que o 'thead' se sobresaia em relação as 'tr' e 'th', aplicando uma 'position:sticky;'. Porém, somente isso não é o suficiente, já que é preciso indicar que região da tabela nós queremos que seja 'colada' na tela, com isso adicionamos a propriedade 'top:0;' para referenciar a parte de cima da tabela. Por fim, isso apenas carrega o conteúdo das células selecionadas, sendo assim é necessário colorir o fundo com um 'background-color'</p>
+        <pre>
+            <code>
+                table{
+                    margin: auto;
+                    border: 3px dashed var(--cor2);
+                    max-width: 500px;
+                    font-size: 1.5em;
+                    padding: 5px;
+                    background-color: var(--cor3);
+                    text-align: center;
+                    <mark>position: relative;</mark>
+                }
+                thead > tr > th{
+                    position: sticky;
+                    top: 0;
+                    background-color: var(--cor2);
+                }
+            </code>
+        </pre>
+        <p>Outra coisa complicada de se fazer era <strong></strong>personalizar colunas</strong>, porém no HTML5,foi criada a tag &lt;colgroup&gt;, que perminte com que se identifique cada coluna da tabela e possibilita personalizar cada uma sem precisar adicionar um estilo de forma manual em cada uma das células das mesmas.</p>
+        <pre>
+            <code>
+                &lt;table&gt;
+                    &lt;colgroup&gt;
+                        &lt;col class= "coluna1"&gt;
+                        &lt;col class= "coluna2"&gt;
+                        &lt;col class= "coluna3"&gt;
+                        &lt;col class= "coluna4"&gt;
+                        &lt;col class= "coluna5"&gt;
+                    &lt;/colgroup&gt;
+                    &lt;caption&gt;Título da tabela&lt;/caption&gt;
+                    &lt;tr&gt;
+                    &lt;th scope="col"&gt;Nome&lt;/th&gt;
+                    &lt;/tr&gt;
+                    ...
+                &lt;/table&gt;
+            </code>
+        </pre>
+        <h2>Responsividade das tabelas</h2>
+        <p>Para evitarmos rolagem lateral em toda página, podemos incluir toda tabela dentro de uma &lt;div&gt;, adicionar um ID em CSS, configurar o atributo <mark>overflow/overflow-x/overflow-y</mark> com configurações automáticas.</p>
+        <pre>
+            <code>
+                div#container{
+                    overflow:auto;
+                }
+            </code>
+        </pre>
+        <p>Isso faz com haja uma barra de rolagem apenas na tabela que por sua vez está contida na div. Segue abaixo um exemplo de tabela para praticarmos:</p>
+        <table>
+            <caption>Orçamento doméstico - Setembro/24</caption>
+            <thead>
+                <tr>
+                    <th>Budget</th>
+                    <th scope="col">Valor Gasto</th>
+                    <th scope="col">Devo Gastar</th>
+                    <th scope="col">% Utilizada</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <th scope="row">Custos fixos</th>
+                    <td>R$652,97</td>
+                    <td>R$1068,47</td>
+                    <td>61.11%</td>
+                </tr>
+                <tr>
+                    <th scope="row">Conforto</th>
+                    <td>R$447,62</td>
+                    <td>R$534,24</td>
+                    <td>83.79%</td>
+                </tr>
+                <tr>
+                    <th scope="row">Metas</th>
+                    <td>R$500,00</td>
+                    <td>R$356,16</td>
+                    <td>140.39%</td>
+                </tr>
+                <tr>
+                    <th scope="row">Prazeres</th>
+                    <td>R$338,49</td>
+                    <td>R$356,16</td>
+                    <td>95.04%</td>
+                </tr>
+                <tr>
+                    <th scope="row">Liberdade Financeira</th>
+                    <td>R$1300,00</td>
+                    <td>R$890,39</td>
+                    <td>146.0%</td>
+                </tr>
+                <tr>
+                    <th scope="row">Conhecimento</th>
+                    <td>R$299,70</td>
+                    <td>R$356,16</td>
+                    <td>84.15%</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total Gasto: R$3538,78</td>
+                    <td>Total a Gastar: R$3561,00</td>
+                    <td>% Utilizada da renda: 99%</td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+</body>
+</html>
