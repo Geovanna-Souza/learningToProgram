@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicons/Darth-vader.ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilo-padrao.css">
+    <title>Git e GitHub</title>
+</head>
+<body>
+    <header>
+        <h1>HTML5 & CSS3 LEARNING</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="">Aulas</a></li>
+            <li><a href="">Imagens</a></li>
+            <li><a href="">Projetos</a></li>
+            <li><a href="">Sobre</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Git & GitHub</h1>
+        <h2>Git</h2>
+        <p>O Git <strong>é um software de controle de versão</strong> e tem a finalidade de <strong>gerenciar diferentes versóes de um documento</strong>. Sendo assim, ele "salva" as diferentes versões de um projeto que está sendo manipulado ou em desenvolvimento. O git <mark>é um repositório local</mark>, que fica na maquina do desenvolvedor.</p>
+        <h2>GitHub</h2>
+        <p>O github é um <strong>serviço de web compartilhado para projetos que utilizam o git para versionamento</strong>. Trata-se de uma rede social de code, <strong>onde pode-se compartilhar e acessar projetos.</strong> <mark>Ele é um repositório remoto.</mark>
+        <br>
+        Nele podemos criar um número ilimitado de repositórios, hospedar códigos-fonte (em todas linguagens), com uma das suas ferramentas - <strong>o GitHub Pages</strong>- podemos "hospedar" sites básicos de forma gratuita e fora que permite colaborar com outros projetos e realizar forks para participar de projetos de terceiros.
+        </p>
+        <h2>Instalando e utilizando o Git</h2>
+        <p>Para instalar o git na máquina, basta baixar o mesmo no seu <a href="https://git-scm.com/downloads/win" target="_blank" rel="external">site oficial</a> e seguir com a instalação. Em seguida, vamos instalar também o <a href="https://code.visualstudio.com/download" target="_blank" rel="external">VS Code</a>, que vai ser o software no qual vamos manipular de forma ativa os projetos.
+        <br>
+        Após instalados vamos abrir o Git e/ou powershell para dar início as configurações iniciais e essenciais para criarmos nossos projetos.
+        <ol type="1">
+            <li> 1° No prompt de comando no git, vamos configurar nossa autoria, ou seja, vamos nos registrar como autores de todos os projetos que seram criados na máquina. A linha de comando para isso é: 
+                <pre>
+                    <code>
+                        git config --global user.name "nomeDoUsuário"
+                        git config --global user.email emailUsuário@mail.com
+                        git config --global core.editor vim
+                    </code>
+                </pre>
+            </li>
+            <li>2° Após realizar as configurações globais, vamos criar uma pasta e nela criar um repositório local para dar um lugar a um projeto: 
+                <pre>
+                    <code>
+                        mkdir git- nome-projeto -> CRIA UMA PASTA
+                        cd nome-pasta -> ENTRA NA PASTA
+                        cd.. -> VOLTA A PASTA
+                        dirgit- nome-projeto/ -> ENTRA NA PASTA 
+                        git init -> INICIA UM REPOSITÓRIO local
+                        ls-la -> MOSTRA O REPOSITÓRIO/LISTA DE ARQUIVOS
+                        echo/vi nome-arquivo -> i (entra no modo insert) -> #Conteúdo do documento... -> TeclaESC (sai do modo insert) -> :w(: = inicia um comando; w = escreve e/ou salva) -> q = sai do modo insert.
+                    </code>
+                </pre>
+            </li>
+            <li>3° Depois de iniciar o repositório, podemos checar o status dos arquivos no diretório, adicionar e commitar as nossos arquivos.
+                <pre>
+                    <code>
+                        git status -> VERIFICA O ESTADO DOS ARQUIVOS/DIRETÓRIO
+                        git add nome-arquivo.txt OU git add . -> para adicionar um arquivo ou diretório (staged area)
+                        git commit -m "mensagem sucinta do que foi feito nesse commit"
+                    </code>
+                </pre>
+            </li>
+            <li>4° Pronto! Realizamos um commit do projeto na nossa máquina local, entretanto precisamos conectar com a nossa conta no GitHub para subir o projeto para o repositório remoto. Para isso, com uma conta e chave SSH (passo a passo localizado na aba 'help' do GitHub) vamos realizar os seguintes comandos no terminal:
+                <pre>
+                    <code>
+                        cd~/.ssh
+                        ls -> AQUI COPIAMOS O id_rsa.pub
+                        cat id_rsa.pub -> Copiar a chave SSH e adicionar no GitHub
+                        git remote add origin emailgithub@git.com
+                        git push origin nome-branch
+                    </code>
+                </pre>
+            </li>
+        </ol>
+        </p>
+        <h2>Comandos do terminal</h2>
+        <p>Através do git podemos realizar muitos tipos de comandos no terminal, um desses tipos de comando são os comandos de origem informativa:
+            <ul>
+                <li>ls-la -> MOSTRA O REPOSITÓRIO/ LISTA DOS ARQUIVOS</li>
+                <li>git log - -> EXIBE O HISTÓRICO</li>
+                <li>git log -- caminho-arquivo -> EXIBE O HISTÓRICO DE UM ARQUIVO ESPECÍFICO</li>
+                <li>git log --author nome</li>
+                <li>git shortlog -> EXIBE EM ORDEM ALFABÉTICA OS AUTORES, NÚMERO DE COMMITS E EM QUAIS ARQUIVOS FORAM MANUZEADOS</li>
+                <li>git log --graph -> MOSTRA AS BRANCHES DE FORMA GRÁFICA</li>
+                <li>git show n°hash do commit</li>
+                <li>git diff -> MOSTRA AS ALTERAÇÕES FEITAS (ANTES DE ADICIONAR/SALVA-LAS) - SERVE PARA DAR UMA REVISADA NO QUE FOI FEITO</li>
+                <li>git diff --name-only -> MOSTRA APENAS O NOME DO ARQUIVO QUE FOI MODIFICADO.</li>
+                <li>git commit -am "" -> ADICIONA TODOS OS ARQUIVOS MODIFICADOS + MENSAGEM</li>
+            </ul>
+            Outro tipo de comandos são os relacionados as branches. As branches são ramificações oriundas do código base, onde cada membro da equipe de desenvolvimento tem a sua e realiza suas alterações, e quando aprovadas para entrarem de forma oficial no projeto são 'fundidas' a branch principal. Segue alguns comandos relacionados as branches:
+            <ul>
+                <li>git clone url-repositório-remoto -> CLONA O REPOSITÓRIO</li>
+                <li>git checkout-b 'nome-branch' -> CRIA UMA NOCA BRANCH E JÁ FICA NELA</li>
+                <li>git branch-D nome-branch -> APAGA UMA BRANCH</li>
+                <li>git branch -> MOSTRA TODAS BRANCHES EXISTENTES</li>
+                <li>git checkout nome-branch -> NAVEGA PARA OUTRA BRANCH</li>
+                <li>git stash -> CRIA UM STASH (UM STASH É UMA BRANCH TEMPORÁRIA QUE CONTÉM ALTERAÇÕES QUE NÃO FORAM COMMITADAS)</li>
+            </ul>
+            Também há comandos para desfazer commits e outras alterações nos arquivos manuseados:
+            <ul>
+                <li>git reset HEAD nome-arquivo -> REMOSVE A EDIÇÃO DO ARQUIVO DEPOIS DE SALVO, PORÉM O CONTEÚDO AINDA ESTÁ DENTRO DO ARQUIVO PODENDO SER REMOVIDO COM O 'git checkout'</li>
+                <li>git rest --soft nome-arquivo OU n°da hash (anterior a que foi mandada errado) -> RETORNA A UM COMMIT ANTES DO ATUAL E RESETA AS MUDANÇAS</li>
+                <li>git reset --mixed nome-arquivo OU n°hash -> RETORNA O ARQUIVO AO ESTADO ANTERIOR AO COMMIT (MODIFIED STAGE)</li>
+                <li>git reset --hard nome-arquivo OU n°hash -> IGNORA O ÚLTIMO COMMIT E RESETA A PENULTIMA VERSÃO DO CÓDIGO</li>
+                <li>git revert n°hash -> REVERTE O COMMIT FEITO NO N° DA HASH EM QUESTÃO</li>
+            </ul>
+            Ainda temos os comandos de união entre branches, que são dividodos em dois tipos, o merge e o rebase.
+            <br>
+            O Merge unifica as branches e suas linhas de desenvolvimento independentes em uma única ramificação. O merge adiciona um novo commit, garantindo que nenhuma alteração seja perdida.
+            <br>
+            Já o rebase unifica s branches criando um histórico linear, movendo a ramificação de funções para a ponta da ramificação master. O rebase comprime todas as alterações em um único "patch" e o integra na branch de destino. Ou seja, é uma forma mais arriscada e deve ser usado com cuidado, pois, ele altera o histórico de commits, reescrevendo todo o histórico dos commits.
+            <ul>
+                <li>git merge nome-branch -> UNI AS BRANCHES COM MERGE</li>
+                <li>git rebase nome-arquivo -> UNI AS BRANCHES COM REBASE</li>
+            </ul>
+            Por fim, temos outros comandos com finalidade de interagir com o repositório remoto:
+            <ul>
+                <li>git remote add origin endereço-SSH</li>
+                <li>git push -u origin nome-branch -> UPA OS COMMITS DO REPOSITÓRIO LOCAL PARA O REPOSITÓRIO REMOTO</li>
+                <li>git pull -> ATUALIZA O REPOSITÓRIO LOCAL COM AS ALTERAÇÕES FEITAS NO REPOSITÓRIO REMOTO</li>
+                <li>git cat nome-arquivo -> MOSTRA O CONTEÚDO DO ARQUIVO DO REPOSITÓRIO REMOTO</li>
+                <li>git fench origin branch -> PEGA TODOS OS DADOS DO REPOSITÓRIO REMOTO QUE VOCÊ NÃO AINDA NÃO TEM</li>
+            </ul>
+        </p>
+        <h2>Ciclo de vida do status dos arquivos</h2>
+        <hr>
+        <h3>UNTRACKED</h3>
+        <p>Trata-se do momento no qual o arquivo foi adiciona no repositório, mas ainda não foi 'visto pelo git', ou seja, o git não o reconhece dentro do seu repositório nenhuma versão do arquivo.</p>
+        <h3>Unmodified</h3>
+        <p>Esse estágio ocorre após adicionar o novo arquivo (git add/ add .) no git sem registrar nenhuma modificação após adicionado.</p>
+        <h3>Modified</h3>
+        <p>Quando após adicionado/commitado o arquivo passou por alguma modificação</p>
+        <h3>Staged</h3>
+        <p>Quando o arquivo modificado é recebido e criado uma versão dele. Após o arquivo receber um commit ele volta para o estágio unmodified (ou seja, não foi modificado desde sua última versão comitada).</p>
+        <h2>Fork, Branches e Git Ignore</h2>
+        <hr>
+        <h3>Fork</h3>
+        <p>É uma funcionalidadee que copia umprojeto de terceiros, para que se possa trabalhar também no mesmo projeto. Quando finalizado, pode-se realizar um pull-request e contribuir com o projeto de alguém.</p>
+        <p>Já as branches como já abordadas anteriormente, são bifurcações do código-fonte que criam uma linha indiferente de desenvolvimento. Funciona como um controle de origem que permite separar a evolução do código principal de forma livre, sem afetar o trabalho do outro. Esse recurso viailiza testar novos recursos, e corrigir eventuais erros sem afetar o código-fonte do projeto.</p>
+        <p>Por fim, o Git Ignore é um arquivo oculto que indica quais arquivos ou tipos de arquivos não devem ser rastrerados para versionamento. Para isso basta salvar o arquivo a ser ignorado dentro do '.ignore' que também funciona com extensões. geralmente é utilizado para arquivos sensíveis (senhas) ou irrelevantes (node_module).</p>
+    </main>
+</body>
+</html>

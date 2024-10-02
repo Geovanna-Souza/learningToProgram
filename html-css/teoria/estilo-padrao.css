@@ -244,6 +244,11 @@ div.quadrado{
 .fonteBaixada{
     font-family: "Handlee", cursive;
 }
+
+.flexTable{
+    overflow-x: auto;
+}
+
 div#q1{
     background-color: red;
 }

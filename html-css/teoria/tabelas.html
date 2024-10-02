@@ -57,7 +57,7 @@
             </code>
         </pre>
         <h2>Efeito zebrado</h2>
-        <p>Para melhor visualização das informações pelo usuário (principalmente em tabelas grandes), o efeito zebrado pode solucionar esse problema visual. Para aplicalo em uma tabela precisamos estilizar a tabela com uma pseudo-classe chamada <mark>:nth-child(VALORn)</mark> ficando da seguinte maneira:</p>
+        <p>Para melhor visualização das informações pelo usuário (principalmente em tabelas grandes), o efeito zebrado pode solucionar esse problema visual. Para aplica-lo em uma tabela precisamos estilizar a tabela com uma pseudo-classe chamada <mark>:nth-child(VALORn)</mark> ficando da seguinte maneira:</p>
         <pre>
             <code>
                 tbody > tr:nth-child(2n){
@@ -81,13 +81,13 @@
                     <mark>position: relative;</mark>
                 }
                 thead > tr > th{
-                    position: sticky;
+                    <mark>position: sticky;</mark>
                     top: 0;
                     background-color: var(--cor2);
                 }
             </code>
         </pre>
-        <p>Outra coisa complicada de se fazer era <strong></strong>personalizar colunas</strong>, porém no HTML5,foi criada a tag &lt;colgroup&gt;, que perminte com que se identifique cada coluna da tabela e possibilita personalizar cada uma sem precisar adicionar um estilo de forma manual em cada uma das células das mesmas.</p>
+        <p>Outra coisa complicada de se fazer era <strong>personalizar colunas</strong>, porém no HTML5,foi criada a tag <mark>&lt;colgroup&gt;</mark>, que perminte com que se identifique cada coluna da tabela e possibilita personalizar cada uma sem precisar adicionar um estilo de forma manual em cada uma das células das mesmas.</p>
         <pre>
             <code>
                 &lt;table&gt;
@@ -116,63 +116,65 @@
             </code>
         </pre>
         <p>Isso faz com haja uma barra de rolagem apenas na tabela que por sua vez está contida na div. Segue abaixo um exemplo de tabela para praticarmos:</p>
-        <table>
-            <caption>Orçamento doméstico - Setembro/24</caption>
-            <thead>
-                <tr>
-                    <th>Budget</th>
-                    <th scope="col">Valor Gasto</th>
-                    <th scope="col">Devo Gastar</th>
-                    <th scope="col">% Utilizada</th>
-                </tr>
-            </thead>
+        <div class="flexTable">
+            <table>
+                <caption>Orçamento doméstico - Setembro/24</caption>
+                <thead>
+                    <tr>
+                        <th>Budget</th>
+                        <th scope="col">Valor Gasto</th>
+                        <th scope="col">Devo Gastar</th>
+                        <th scope="col">% Utilizada</th>
+                    </tr>
+                </thead>
             
-            <tbody>
-                <tr>
-                    <th scope="row">Custos fixos</th>
-                    <td>R$652,97</td>
-                    <td>R$1068,47</td>
-                    <td>61.11%</td>
-                </tr>
-                <tr>
-                    <th scope="row">Conforto</th>
-                    <td>R$447,62</td>
-                    <td>R$534,24</td>
-                    <td>83.79%</td>
-                </tr>
-                <tr>
-                    <th scope="row">Metas</th>
-                    <td>R$500,00</td>
-                    <td>R$356,16</td>
-                    <td>140.39%</td>
-                </tr>
-                <tr>
-                    <th scope="row">Prazeres</th>
-                    <td>R$338,49</td>
-                    <td>R$356,16</td>
-                    <td>95.04%</td>
-                </tr>
-                <tr>
-                    <th scope="row">Liberdade Financeira</th>
-                    <td>R$1300,00</td>
-                    <td>R$890,39</td>
-                    <td>146.0%</td>
-                </tr>
-                <tr>
-                    <th scope="row">Conhecimento</th>
-                    <td>R$299,70</td>
-                    <td>R$356,16</td>
-                    <td>84.15%</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="2">Total Gasto: R$3538,78</td>
-                    <td>Total a Gastar: R$3561,00</td>
-                    <td>% Utilizada da renda: 99%</td>
-                </tr>
-            </tfoot>
-        </table>
+                <tbody>
+                    <tr>
+                        <th scope="row">Custos fixos</th>
+                        <td>R$652,97</td>
+                        <td>R$1068,47</td>
+                        <td>61.11%</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Conforto</th>
+                        <td>R$447,62</td>
+                        <td>R$534,24</td>
+                        <td>83.79%</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Metas</th>
+                        <td>R$500,00</td>
+                        <td>R$356,16</td>
+                        <td>140.39%</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Prazeres</th>
+                        <td>R$338,49</td>
+                        <td>R$356,16</td>
+                        <td>95.04%</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Liberdade Financeira</th>
+                        <td>R$1300,00</td>
+                        <td>R$890,39</td>
+                        <td>146.0%</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Conhecimento</th>
+                        <td>R$299,70</td>
+                        <td>R$356,16</td>
+                        <td>84.15%</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total Gasto: R$3538,78</td>
+                        <td>Total a Gastar: R$3561,00</td>
+                        <td>% Utilizada da renda: 99%</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
     </main>
 </body>
 </html>
