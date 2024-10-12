@@ -22,7 +22,7 @@
     <main>
         <h1>Git & GitHub</h1>
         <h2>Git</h2>
-        <p>O Git <strong>é um software de controle de versão</strong> e tem a finalidade de <strong>gerenciar diferentes versóes de um documento</strong>. Sendo assim, ele "salva" as diferentes versões de um projeto que está sendo manipulado ou em desenvolvimento. O git <mark>é um repositório local</mark>, que fica na maquina do desenvolvedor.</p>
+        <p>O Git <strong>é um software de controle de versão</strong> e tem a finalidade de <strong>gerenciar diferentes versões de um documento</strong>. Sendo assim, ele "salva" as diferentes versões de um projeto que está sendo manipulado ou em desenvolvimento. O git <mark>é um repositório local</mark>, que fica na maquina do desenvolvedor.</p>
         <h2>GitHub</h2>
         <p>O github é um <strong>serviço de web compartilhado para projetos que utilizam o git para versionamento</strong>. Trata-se de uma rede social de code, <strong>onde pode-se compartilhar e acessar projetos.</strong> <mark>Ele é um repositório remoto.</mark>
         <br>
@@ -55,7 +55,7 @@
                     </code>
                 </pre>
             </li>
-            <li>3° Depois de iniciar o repositório, podemos checar o status dos arquivos no diretório, adicionar e commitar as nossos arquivos.
+            <li>3° Depois de iniciar o repositório, podemos checar o status dos arquivos no diretório, adicionar e commitar os nossos arquivos.
                 <pre>
                     <code>
                         git status -> VERIFICA O ESTADO DOS ARQUIVOS/DIRETÓRIO
@@ -94,7 +94,7 @@
             Outro tipo de comandos são os relacionados as branches. As branches são ramificações oriundas do código base, onde cada membro da equipe de desenvolvimento tem a sua e realiza suas alterações, e quando aprovadas para entrarem de forma oficial no projeto são 'fundidas' a branch principal. Segue alguns comandos relacionados as branches:
             <ul>
                 <li>git clone url-repositório-remoto -> CLONA O REPOSITÓRIO</li>
-                <li>git checkout-b 'nome-branch' -> CRIA UMA NOCA BRANCH E JÁ FICA NELA</li>
+                <li>git checkout-b 'nome-branch' -> CRIA UMA NOVA BRANCH E JÁ FICA NELA</li>
                 <li>git branch-D nome-branch -> APAGA UMA BRANCH</li>
                 <li>git branch -> MOSTRA TODAS BRANCHES EXISTENTES</li>
                 <li>git checkout nome-branch -> NAVEGA PARA OUTRA BRANCH</li>
@@ -110,9 +110,9 @@
             </ul>
             Ainda temos os comandos de união entre branches, que são dividodos em dois tipos, o merge e o rebase.
             <br>
-            O Merge unifica as branches e suas linhas de desenvolvimento independentes em uma única ramificação. O merge adiciona um novo commit, garantindo que nenhuma alteração seja perdida.
+            O <mark>Merge</mark> unifica as branches e suas linhas de desenvolvimento independentes em uma única ramificação. <strong>O merge adiciona um novo commit, garantindo que nenhuma alteração seja perdida.</strong>
             <br>
-            Já o rebase unifica s branches criando um histórico linear, movendo a ramificação de funções para a ponta da ramificação master. O rebase comprime todas as alterações em um único "patch" e o integra na branch de destino. Ou seja, é uma forma mais arriscada e deve ser usado com cuidado, pois, ele altera o histórico de commits, reescrevendo todo o histórico dos commits.
+            Já o <mark>rebase</mark> unifica as branches criando um histórico linear, movendo a ramificação de funções para a ponta da ramificação master. O rebase <strong>comprime todas as alterações em um único "patch" e o integra na branch de destino.</strong> Ou seja, é uma forma mais arriscada e deve ser usado com cuidado, pois, ele altera o histórico de commits, reescrevendo todo o histórico dos commits.
             <ul>
                 <li>git merge nome-branch -> UNI AS BRANCHES COM MERGE</li>
                 <li>git rebase nome-arquivo -> UNI AS BRANCHES COM REBASE</li>
@@ -129,7 +129,7 @@
         <h2>Ciclo de vida do status dos arquivos</h2>
         <hr>
         <h3>UNTRACKED</h3>
-        <p>Trata-se do momento no qual o arquivo foi adiciona no repositório, mas ainda não foi 'visto pelo git', ou seja, o git não o reconhece dentro do seu repositório nenhuma versão do arquivo.</p>
+        <p>Trata-se do momento no qual o arquivo foi adicionado no repositório, mas ainda não foi 'visto pelo git', ou seja, o git não o reconhece dentro do seu repositório nenhuma versão do arquivo.</p>
         <h3>Unmodified</h3>
         <p>Esse estágio ocorre após adicionar o novo arquivo (git add/ add .) no git sem registrar nenhuma modificação após adicionado.</p>
         <h3>Modified</h3>
@@ -139,9 +139,11 @@
         <h2>Fork, Branches e Git Ignore</h2>
         <hr>
         <h3>Fork</h3>
-        <p>É uma funcionalidadee que copia umprojeto de terceiros, para que se possa trabalhar também no mesmo projeto. Quando finalizado, pode-se realizar um pull-request e contribuir com o projeto de alguém.</p>
+        <p>É uma funcionalidade que copia um projeto de terceiros, para que se possa trabalhar também no mesmo projeto. Quando finalizado, pode-se realizar um pull-request e contribuir com o projeto de alguém.</p>
+        <h3>Branches</h3>
         <p>Já as branches como já abordadas anteriormente, são bifurcações do código-fonte que criam uma linha indiferente de desenvolvimento. Funciona como um controle de origem que permite separar a evolução do código principal de forma livre, sem afetar o trabalho do outro. Esse recurso viailiza testar novos recursos, e corrigir eventuais erros sem afetar o código-fonte do projeto.</p>
-        <p>Por fim, o Git Ignore é um arquivo oculto que indica quais arquivos ou tipos de arquivos não devem ser rastrerados para versionamento. Para isso basta salvar o arquivo a ser ignorado dentro do '.ignore' que também funciona com extensões. geralmente é utilizado para arquivos sensíveis (senhas) ou irrelevantes (node_module).</p>
+        <h3>Git Ignore</h3>
+        <p>Por fim, o Git Ignore é um arquivo oculto que indica quais arquivos ou tipos de arquivos não devem ser rastreados para versionamento. Para isso basta salvar o arquivo a ser ignorado dentro do '.ignore' que também funciona com extensões. Geralmente é utilizado para arquivos sensíveis (senhas) ou irrelevantes (node_module).</p>
     </main>
 </body>
 </html>
